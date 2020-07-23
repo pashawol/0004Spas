@@ -1,9 +1,25 @@
 mixin sInstallments()
 	// start sInstallments
 	+b.SECTION.sInstallments.section#sInstallments&attributes(attributes)
+		+e.top-leaf-bg.sInstallments__bg.d-none.d-lg-block
+			img.lazy(src="#" data-src="img/@2x/sInstalment-top.png" alt="")
+		+e.bot-leaf-bg.sInstallments__bg.d-none.d-lg-block
+			img.lazy(src="#" data-src="img/@2x/sInstalment-bot.png" alt="")
+		+e.section-wind-bg.d-none.d-lg-block
+			+e.wind-cont
+				img.lazy(src="#" data-src="img/@2x/installments-img.jpg" alt="")
 		.container
-			+b.section-title.text-center
-				h2 sInstallments
-				
-			.row
+			+e.row.row
+				+e.content-col.col-lg-6.offset-lg-6
+					+b.section-title
+						h2 Рассрочка на покупку деревянного окна
+					+e.top-txt
+						p Не&nbsp;нужно копить деньги, не&nbsp;нужно ждать, не&nbsp;нужно платить за&nbsp;кредит. Специальная программа от&nbsp;HomeCredit позволяет получить нашу продукцию с&nbsp;50% предоплатой. Оплату процентов банку мы&nbsp;берем на&nbsp;себя.
+					+e.conditions
+						+e.cond-head Вы&nbsp;можете получить рассрочку, если:
+						ul
+							li Ваш возраст 21-69 лет включительно;
+							li Вы&nbsp;&mdash; гражданин РФ;
+						p Вы&nbsp;имеете постоянную регистрацию в&nbsp;любом из&nbsp;регионов присутствия кредитно-кассовых офисов Банка (субъекте&nbsp;РФ) и&nbsp;фактически проживаете в&nbsp;регионе (субъекте&nbsp;РФ) оформления кредита.
+					+e.A.learn-more-btn(href="#") Подробнее
 	// end sInstallments

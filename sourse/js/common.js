@@ -2,8 +2,8 @@ const $ = jQuery;
 const JSCCommon = {
 	// часть вызов скриптов здесь, для использования при AJAX
 	btnToggleMenuMobile: [].slice.call(document.querySelectorAll(".toggle-menu-mobile--js")),
-	menuMobile: document.querySelector(".menu-mobile--js"),
-	menuMobileLink: [].slice.call(document.querySelectorAll(".menu-mobile--js ul li a")),
+	menuMobile: document.querySelector(".top-nav__menu-block"),
+	menuMobileLink: [].slice.call(document.querySelectorAll(".top-nav__menu-block li a")),
 	body: document.querySelector("body"),
 
 	modalCall() {
@@ -59,7 +59,7 @@ const JSCCommon = {
 						element.classList.toggle("on");
 					});
 					_this.menuMobile.classList.toggle("active");
-					_this.body.classList.toggle("fixed");
+					// _this.body.classList.toggle("fixed");
 
 					return false;
 				});
@@ -76,7 +76,7 @@ const JSCCommon = {
 
 			});
 			_this.menuMobile.classList.remove("active");
-			_this.body.classList.remove("fixed");
+			// _this.body.classList.remove("fixed");
 		}
 
 	},
@@ -87,13 +87,13 @@ const JSCCommon = {
 		if (_this.menuMobileLink) {
 
 			_this.toggleMenu();
-			document.addEventListener('mouseup', function (event) {
-				let container = event.target.closest(".menu-mobile--js.active"); // (1)
-				if (!container) {
-					_this.closeMenu();
+			// document.addEventListener('mouseup', function (event) {
+			// 	let container = event.target.closest(".menu-mobile--js.active"); // (1)
+			// 	if (!container) {
+			// 		_this.closeMenu();
 
-				}
-			}, { passive: true });
+			// 	}
+			// }, { passive: true });
 		}
 	},
 	// /mobileMenu
@@ -182,10 +182,10 @@ function eventHandler() {
  
 	var galleryThumbs = new Swiper('.gallery-thumbs', {
 		// spaceBetween: 0,
-		slidesPerView: 3,
+		slidesPerView: 'auto',
 		// loop: true,
-		// freeMode: true,
-		// loopedSlides: 5, //looped slides should be the same
+		freeMode: true,
+		loopedSlides: 5, //looped slides should be the same
 		watchSlidesVisibility: true,
 		watchSlidesProgress: true,
 		watchOverflow: true,

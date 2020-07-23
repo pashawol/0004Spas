@@ -1,6 +1,27 @@
 
 	// start .sLogos
 	.sLogos {
+		--sPT: #{rem(55)};
+		--sTPB: #{rem(36)};
+		.swiper-wrapper{
+			align-items: center;
+		}
+		&__slide{
+			opacity: 0.6;
+			@include mt;
+			text-align: center;
+			padding-left: rem(10);
+			padding-right: rem(10);
+			img{
+				@extend .res-i;
+			}
+			&:hover{
+				opacity: 1;
+			}
+		}
+		&__slider-wrapper{
+			position: relative;
+		}
 		 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

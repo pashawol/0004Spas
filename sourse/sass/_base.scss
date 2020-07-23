@@ -40,6 +40,11 @@ html {
 
 .section-title { 
 	padding-bottom: var(--sTPB);
+	&__text{
+		@extend .h6;
+		font-weight: 300;
+	}
+	
 	h2{
 		font-weight: 800;
 		text-transform: uppercase;
@@ -47,7 +52,11 @@ html {
 		&::after{
 			content: '';
 			display: block;
-			width: 132px;
+			@include media-breakpoint-up(sm) {
+
+				width: 132px;
+			}
+			width: 90px;
 			height: 2px;
 			background-color: $body-color;
 			margin-top: em(14);

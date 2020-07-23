@@ -1,10 +1,50 @@
 mixin headerBlock()
 	// start headerBlock
-	+b.headerBlock.section#headerBlock&attributes(attributes)
+	+b.headerBlock#headerBlock&attributes(attributes)
+		+e.slider--js.swiper-container
+			.swiper-wrapper
+				mixin sl(t)
+					+e.slide.swiper-slide.bg-wrap
+						picture.picture-bg
+							source.swiper-lazy(srcset="#" data-srcset=`img/@2x/webp/head-bg.webp` type="image/webp")
+							img.object-fit-js.img-bg.swiper-lazy(src="#" data-src=`img/@2x/head-bg.jpg`, alt="")
+						 
+						.container
+							.row.align-items-center
+								+e.col.col-md-auto
+									+e.caption
+										+e.title--lg= t
+										+e.title-sub премиум класса
+										p В основе деревянных окон — натуральная древесина. Все используемые в обработке материалы экологически чистые, сохраняют свойства дерева и абсолютно безвредны. 
+										+e.btn(href="#") Подробнее
+								.col-auto.d-none.d-md-block
+									picture
+										source.swiper-lazy(srcset="#" data-srcset=`img/@2x/webp/head-img.webp` type="image/webp")
+										img.swiper-lazy(src="#" data-src=`img/@2x/head-img.png`, alt="")
+				+sl('Деревянные евроокна ')
+				+sl('Деревянные двери')
+				+sl('Деревянные порталы')
 		.container
-			+b.section-title.text-center
-				h2 headerBlock ds dfsdfdsfsd
+			+e.control-wrap
+				.swiper-pagination
+				+arrow
+		+e.foot-slider.gallery-thumbs.swiper-container
+			.swiper-wrapper
+				mixin item(t,i, color)
+					+e.slide-sm.swiper-slide(style=`color:${color}`)
+						+e.item
+							.row
+								.col
+									+e.title--sm= t
+								.col-auto
+									img(src=`img/svg/cat-${i}.svg`, alt="") 
+							+e.btn--more(href="#") подробнее
+				+item('Деревянные окна','1', '#d49873')
+				+item('Деревянные двери','2','#d86e33')
+				+item('Деревянные порталы','3','#b85320')
+			
+			
 
-			.row
+
 						
 	// end headerBlock

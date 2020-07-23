@@ -1,22 +1,26 @@
  
 	  
 .soc{
-	margin: 0 rem(-5px);
+	margin: 0 rem(-10px);
 	display: flex;
 	&__item{
 		text-decoration: none !important;
-		margin: 0 rem(5px);
+		margin: 0 rem(10px);
 		vertical-align: middle;
 		@include mt;
 		display: block;
+		@extend .text-body;
 		&:hover{
-		 	// box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
+			// box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
 			opacity: .6 ;
-		}
-		
+		} 
 	}
 	.icon{
-	font-size: rem(30);
+		font-size: rem(19);
+		&-vk{
+			font-size: rem(14);
+
+		}
 	}
 	 
 
@@ -34,3 +38,50 @@
 	}
 }
 
+
+
+.searchBlock{
+	margin-bottom: rem(32);
+	input{
+		@extend .form-control;
+		box-shadow: none !important;
+		border-radius: 0;
+		padding: rem(8) var(--tap-navPL);
+		padding-right: calc(var(--tap-navPL) + #{rem(22)});
+
+		border: 1px solid #cccccc;
+		width: 100%;
+	}
+	position: relative;
+	button{
+		position: absolute;
+		right: calc(var(--tap-navPL) - 10px);
+		background: none;
+		padding: 0;
+		border: none;
+		top: rem(5);
+		outline: none;
+		.icon{
+
+			font-size: rem(15);
+		}
+	}
+}
+.contactBlock{
+	&__title{
+		color: $primary2; 
+		font-size: $smallest;  
+		text-transform: uppercase;
+		display: flex;
+		align-items: center;
+		margin-bottom: rem(10);
+		.icon{
+			flex: 0 0 auto;
+			font-size: rem(18);
+			margin-right: rem(10);
+		}
+	}
+	&__item{
+		margin-bottom: rem(30);
+	}
+}

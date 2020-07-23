@@ -9,9 +9,11 @@ $h: em(2);
 	position: relative;
 	color: $primary;
 	font-size: 32px;
-
+	small{
+		font-size: $h6-font-size;
+	}
 	&.on {
-		color: #ffffff;
+		// color: #ffffff;
 	}
 
 	span:after,

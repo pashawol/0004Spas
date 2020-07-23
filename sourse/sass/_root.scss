@@ -13,12 +13,14 @@
 	--sTPB: #{rem(40 / 2)};
 
 
-		--swiperArrowSize: #{rem(68)};
+		--swiperArrowSize: #{rem(10)};
 		--swiperArrowPosition: calc(-1 * var(--swiperArrowSize) / 2);
 		--swiperBorderColorDef: #{$primary};
-		--swiperColorDef: #{$primary};
+		--swiperColorDef: #{$body-color};
 		--swiperBgDef: #ffffff;
-	
+
+		--tap-navPL: #{rem(30)};
+		--tap-navPR: #{rem(30)};
 }
 
 @include media-breakpoint-up(xl) {}

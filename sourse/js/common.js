@@ -87,13 +87,6 @@ const JSCCommon = {
 		if (_this.menuMobileLink) {
 
 			_this.toggleMenu();
-			// _this.menuMobileLink.forEach(function (element) {
-			// 	element.addEventListener('click', function (e) {
-			// 		console.log(element);
-			// 		_this.closeMenu();
-
-			// 	});
-			// })
 			document.addEventListener('mouseup', function (event) {
 				let container = event.target.closest(".menu-mobile--js.active"); // (1)
 				if (!container) {
@@ -135,25 +128,9 @@ function eventHandler() {
 
 	// JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
-	$(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/main.jpg);"></div>')
+	$(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/main.png);"></div>')
 	// /добавляет подложку для pixel perfect
 
-
-
-	// const url = document.location.href;
-	// $.each($(".top-nav__nav a "), function() {
-
-	// 	if (this.href == url) {
-	// 		if ($(this).hasClass("top-nav__link") == true) {
-
-	// 			$(this).addClass('top-nav__link-active');
-	// 		}
-	// 		if ($(this).hasClass("footer__link") == true) {
-
-	// 			$(this).addClass('footer__link-active');
-	// 		} 
-	// 	}; 
-	// }); 
 
 	// /закрыть/открыть мобильное меню
 
@@ -161,16 +138,16 @@ function eventHandler() {
  
 		// скрывает моб меню
 
-		const topH = document.querySelector('header').scrollHeight;
-		let stickyElement = document.querySelector('.top-nav')
-		window.onscroll = () => {
-			if ($(window).scrollTop() > topH) {
+		// const topH = document.querySelector('header').scrollHeight;
+		// let stickyElement = document.querySelector('.top-nav')
+		// window.onscroll = () => {
+		// 	if ($(window).scrollTop() > topH) {
 
-				stickyElement.classList.add('fixed');
-			} else {
-				stickyElement.classList.remove('fixed'); 
-			}
-		};
+		// 		stickyElement.classList.add('fixed');
+		// 	} else {
+		// 		stickyElement.classList.remove('fixed'); 
+		// 	}
+		// };
 		// конец добавил
 		if (window.matchMedia("(min-width: 992px)").matches) {
 			JSCCommon.closeMenu();
@@ -180,7 +157,7 @@ function eventHandler() {
 	window.addEventListener('resize', () => {
 		heightses();
 
-	});
+	}, { passive: true });
 
 	heightses();
 
@@ -195,76 +172,47 @@ function eventHandler() {
 	});
 
 	let defaultSl = {
-
+		spaceBetween: 0,
+		lazy: {
+			loadPrevNext: true,
+		},
 	}
-	const swiper4 = new Swiper('.color-slider', {
+	
+	
+ 
+	var galleryThumbs = new Swiper('.gallery-thumbs', {
+		// spaceBetween: 0,
+		slidesPerView: 3,
+		// loop: true,
+		// freeMode: true,
+		// loopedSlides: 5, //looped slides should be the same
+		watchSlidesVisibility: true,
+		watchSlidesProgress: true,
+		watchOverflow: true,
+	});
+
+	const swipersHead = new Swiper('.headerBlock__slider--js', {
 		// slidesPerView: 5,
 		...defaultSl,
-		slidesPerView: 'auto',
 		watchOverflow: true,
-		spaceBetween: 0,
-		freeMode: true,
-		watchOverflow: true,
-		slidesPerGroup: 3,
-
-		// centeredSlides: true,
+		slidesPerView: 1,
 		loop: true,
-		loopFillGroupWithBlank: true,
-		touchRatio: 0.2,
-		slideToClickedSlide: true,
-		freeModeMomentum: true,
 		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
+			nextEl: '.headerBlock .swiper-button-next',
+			prevEl: '.headerBlock .swiper-button-prev',
 		},
+		pagination: {
+			el: '.headerBlock .swiper-pagination',
+			type: 'bullets',
+			clickable: true,
 
+		},
+		thumbs: {
+			swiper: galleryThumbs,
+		},
 	});
-	// modal window
 
- 
-
-	var gets = (function () {
-		var a = window.location.search;
-		var b = new Object();
-		var c;
-		a = a.substring(1).split("&");
-		for (var i = 0; i < a.length; i++) {
-			c = a[i].split("=");
-			b[c[0]] = c[1];
-		}
-		return b;
-	})();
-	// form
-	$("form").submit(function (e) {
-		e.preventDefault();
-		const th = $(this);
-		var data = th.serialize();
-		th.find('.utm_source').val(decodeURIComponent(gets['utm_source'] || ''));
-		th.find('.utm_term').val(decodeURIComponent(gets['utm_term'] || ''));
-		th.find('.utm_medium').val(decodeURIComponent(gets['utm_medium'] || ''));
-		th.find('.utm_campaign').val(decodeURIComponent(gets['utm_campaign'] || ''));
-		$.ajax({
-			url: 'action.php',
-			type: 'POST',
-			data: data,
-		}).done(function (data) {
-
-			$.fancybox.close();
-			$.fancybox.open({
-				src: '#modal-thanks',
-				type: 'inline'
-			});
-			// window.location.replace("/thanks.html");
-			setTimeout(function () {
-				// Done Functions
-				th.trigger("reset");
-				// $.magnificPopup.close();
-				// ym(53383120, 'reachGoal', 'zakaz');
-				// yaCounter55828534.reachGoal('zakaz');
-			}, 4000);
-		}).fail(function () { });
-
-	});
+  
 
 	var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
 	if (isIE11) {

@@ -20,3 +20,30 @@ mixin ie11()
 	//- modernizer and for ie11
 	 
 	<!--[if lt IE 11]><p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p><![endif]-->
+
+
+mixin search()
+	+b.searchBlock
+		form(action="")
+			input(type="text" placeholder="Поиск")
+			button
+				+icon('search')
+
+
+mixin contactBlockGroup(i,t)
+	+e.item
+		+e.DIV.title
+			if i
+				+icon(i)
+			= t
+		block
+mixin contactBlock()
+	+b.contactBlock
+		+contactBlockGroup('tel','телефон')
+			a.h6.text-body(href="tel:8(800)100-00-00") 8 (800) 100-00-00
+			br
+			a.smallest.text-body.ttu(href="#") Заказать звонок
+		+contactBlockGroup('email','e-mail')
+			a.h6.text-body(href="mailto:info@gmail.com ") info@gmail.com 
+		+contactBlockGroup('','мы в соц сетях')
+			block

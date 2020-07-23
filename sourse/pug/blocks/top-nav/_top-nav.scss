@@ -1,33 +1,72 @@
 .top-nav {
-	padding-top: 15px;
-	// position: absolute;
-	top: 100%;
-	// @include clearfix;ss
-	z-index: 20;
-	padding-top: 3px;
-	@include mt;
-	padding-bottom: 10px;
-	top: 0;
-	left: 0;
-	width: 100%;
+		@include media-breakpoint-up(lg) {
 
-	&.fixed {
-		width: 100vw;
-		bottom: auto;
-		margin-top: 0;
-		background-color: #fff;
+			position: fixed;
+			left: 0;
+			top: 0;
+			width: rem(220);
+			height: 100%;
+			&__inner{
+				height: 100%;
+
+				overflow-y: auto;
+				overflow-x: hidden;
+				display: flex;
+				flex-direction: column;
+				max-width: none;
+				text-align: left;
+			}
+		}
+		padding-top: rem(25);
+		border-top: rem(8) solid $primary3;
+		&__inner{
+			max-width: 230px;
+			text-align: center;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		&__nav { 
+			display: none;
+			list-style-type: none;
+			margin-bottom: auto;
+			padding-bottom: 1rem;
+			@include media-breakpoint-up(lg) {
+				display: block !important;
+			}
+		// margin-bottom: rem(92);
 	}
+	&__logo{
+		padding: 0 var(--tap-navPL)  ;
+		display: block;
+			@include media-breakpoint-up(lg) {
 
-	&__nav {
-		text-align: center;
+			}
+			margin-bottom: rem(20);
+		
+	}
+	&__item {  
 		list-style-type: none;
 	}
-
-	&__item {
-		display: inline-block;
-		list-style-type: none;
+	
+	&__link{
+		display: block; 
+		padding: rem(10) var(--tap-navPL) ;
+		color: $body-color;
+		text-transform: uppercase;
+		font-weight: 300;
+		&:hover,
+		&.active{
+			color: $white;
+			background-color: $primary3;
+		}
 	}
-
+	.contactBlock{
+		
+		padding: 0 var(--tap-navPL)  rem(20);
+		// text-align: center;
+		text-align: left;
+		
+	}
 	// 
 	@include media-breakpoint-up(xl) {}
 

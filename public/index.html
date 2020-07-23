@@ -284,45 +284,190 @@
 				</section>
 				<!-- end sCatalog-->
 				<!-- start sOrder-->
-				<section class="sOrder section" id="sOrder">
+				<section class="sOrder section bg-wrap" id="sOrder">
+					<!-- picture-->
+					<picture class="lazy picture-bg "> 
+						<source srcset="#" data-srcset="img/@2x/webp/form-bg.webp" type="image/webp"/><img class="object-fit-js" src="#" data-src="img/@2x/form-bg.jpg" alt=""/>
+					</picture>
+					<!-- /picture-->
 					<div class="container">
-						<div class="section-title text-center">
-							<h2>sOrder</h2>
+						<div class="sOrder__row row">
+							<div class="col-lg-6">
+								<div class="section-title">
+									<h2>заявка на замер</h2>
+									<div class="section-title__text">Услуга по бесплатному замеру
+									</div>
+								</div>
+							</div>
+							<div class="col">
+								<div class="form-wrap">
+									<form>
+										<div class="row">
+											<div class="col-sm-6">
+												<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Ваше имя" name="text"/>
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
+											<div class="col-sm-6">
+												<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="Контактный телефон" name="tel"/>
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
+										</div>
+										<div class="form-wrap__polite">Нажимая кнопку «Отправить» вы соглашаетесь с <a href="#">Политикой конфиденциальности</a>
+										</div>
+										<buttom class="form-wrap__btn" type="submit">Отправить
+										</buttom>
+									</form>
+								</div>
+							</div>
 						</div>
-						<div class="row"></div>
 					</div>
 				</section>
 				<!-- end sOrder-->
 				<!-- start sAbout-->
 				<section class="sAbout section" id="sAbout">
 					<div class="container">
-						<div class="section-title text-center">
-							<h2>sAbout</h2>
+						<div class="section-title">
+							<h2>О компании</h2>
 						</div>
-						<div class="row"></div>
+						<div class="sAbout__content">
+							<p><strong>Производятся из&nbsp;качественного 3-х слойного клееного бруса</strong> (категории &laquo;В&raquo;), сырьем служит ангарская сосна, лиственница или дуб. </p>
+							<p>Древесина проходит тщательный отбор, чтобы исключить наличие сучков, микротрещин и&nbsp;дефектов на&nbsp;поверхности изделия. Брус производится методом склеивания трех ламелей, это придает ему высокую прочность, поэтому готовое окно не&nbsp;будет менять своей геометрии из-за высокой влажности или, наоборот, аномальной сухости.</p>
+							<div class="sAbout__item">
+								<div class="sAbout__icon-wrap"><img src="img/svg/about-1.svg" alt=""/>
+								</div>Собственное <br> производство
+							</div>
+							<div class="sAbout__item">
+								<div class="sAbout__icon-wrap"><img src="img/svg/about-2.svg" alt=""/>
+								</div>Использование <br> экологичных материалов
+							</div>
+							<div class="sAbout__item">
+								<div class="sAbout__icon-wrap"><img src="img/svg/about-3.svg" alt=""/>
+								</div>Гарантия <br> качества
+							</div>
+							<div class="sAbout__item">
+								<div class="sAbout__icon-wrap"><img src="img/svg/about-4.svg" alt=""/>
+								</div>Качественный <br> монтаж
+							</div><a class="sAbout__btn" href="#">Подробнее</a>
+							<!-- picture-->
+							<picture class="lazy d-none d-sm-block"> 
+								<source srcset="#" data-srcset="img/@2x/webp/about-img.webp" type="image/webp" media="(min-width:576px)"/>
+								<source srcset="#" data-srcset="img/@1x/webp/about-img.webp" type="image/webp"/>
+								<source srcset="#" data-srcset="img/@2x/about-img.png" type="image/png" media="(min-width:576px)"/>
+								<source srcset="#" data-srcset="img/@1x/about-img.png" type="image/png"/><img src="#" data-src="img/@2x/about-img.png" alt=""/>
+							</picture>
+							<!-- /picture-->
+						</div>
 					</div>
 				</section>
 				<!-- end sAbout-->
-				<!-- start sCases-->
-				<section class="sCases section" id="sCases">
-					<div class="container">
-						<div class="section-title text-center">
-							<h2>sCases</h2>
+				<div class="bg-light">
+					<!-- start sCases-->
+					<section class="sCases section" id="sCases">
+						<div class="container">
+							<div class="section-title">
+								<div class="row">
+									<div class="col">
+										<h2>Выполненные работы </h2>
+									</div>
+								</div>
+							</div>
+							<div class="sCases__slider-wrapper">
+								<div class="sCases__slider sCases__slider--js swiper-container">
+									<div class="swiper-wrapper"><a class="sCases__slide swiper-slide bg-wrap" href="img/@2x/case-1.jpg" data-fancybox="cases-gal">
+										<picture class="picture-bg">
+											<source srcset="img/@2x/webp/case-1.webp" type="image/webp"/><img class="object-fit-js img-bg" src="img/@2x/case-1.jpg" alt=""/>
+										</picture><span class="sCases__title">Остекление частного дома</span></a><a class="sCases__slide swiper-slide bg-wrap" href="img/@2x/case-2.jpg" data-fancybox="cases-gal">
+										<picture class="picture-bg">
+											<source srcset="img/@2x/webp/case-2.webp" type="image/webp"/><img class="object-fit-js img-bg" src="img/@2x/case-2.jpg" alt=""/>
+										</picture><span class="sCases__title">Остекление частного дома</span></a><a class="sCases__slide swiper-slide bg-wrap" href="img/@2x/case-3.jpg" data-fancybox="cases-gal">
+										<picture class="picture-bg">
+											<source srcset="img/@2x/webp/case-3.webp" type="image/webp"/><img class="object-fit-js img-bg" src="img/@2x/case-3.jpg" alt=""/>
+										</picture><span class="sCases__title">Остекление частного дома</span></a><a class="sCases__slide swiper-slide bg-wrap" href="img/@2x/case-4.jpg" data-fancybox="cases-gal">
+										<picture class="picture-bg">
+											<source srcset="img/@2x/webp/case-4.webp" type="image/webp"/><img class="object-fit-js img-bg" src="img/@2x/case-4.jpg" alt=""/>
+										</picture><span class="sCases__title">Остекление частного дома</span></a><a class="sCases__slide swiper-slide bg-wrap" href="img/@2x/case-5.jpg" data-fancybox="cases-gal">
+										<picture class="picture-bg">
+											<source srcset="img/@2x/webp/case-5.webp" type="image/webp"/><img class="object-fit-js img-bg" src="img/@2x/case-5.jpg" alt=""/>
+										</picture><span class="sCases__title">Остекление частного дома</span></a><a class="sCases__slide swiper-slide bg-wrap" href="img/@2x/case-6.jpg" data-fancybox="cases-gal">
+										<picture class="picture-bg">
+											<source srcset="img/@2x/webp/case-6.webp" type="image/webp"/><img class="object-fit-js img-bg" src="img/@2x/case-6.jpg" alt=""/>
+										</picture><span class="sCases__title">Остекление частного дома</span></a>
+									</div>
+								</div>
+								<div class="d-md-none">
+									<div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
+										<svg class="icon icon-chevron-left ">
+											<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+										</svg>
+									</div>
+									<div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
+										<svg class="icon icon-chevron-right ">
+											<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+										</svg>
+									</div>
+								</div>
+							</div><a class="sCases__btn" href="#">все работы</a>
 						</div>
-						<div class="row"></div>
-					</div>
-				</section>
-				<!-- end sCases-->
-				<!-- start sLogos-->
-				<section class="sLogos section" id="sLogos">
-					<div class="container">
-						<div class="section-title text-center">
-							<h2>sLogos</h2>
+					</section>
+					<!-- end sCases-->
+					<!-- start sLogos-->
+					<section class="sLogos section" id="sLogos">
+						<div class="container">
+							<div class="section-title">
+								<h2>С нами сотрудничают</h2>
+							</div>
+							<div class="sLogos__slider-wrapper">
+								<div class="sLogos__slider sLogos__slider--js swiper-container">
+									<div class="swiper-wrapper">
+										<div class="sLogos__slide swiper-slide bg-wrap">
+											<picture>
+												<source class="swiper-lazy" srcset="#" data-srcset="img/@2x/webp/logo-1.webp" type="image/webp"/><img class="swiper-lazy" src="#" data-src="img/@2x/logo-1.jpg" alt=""/>
+											</picture>
+										</div>
+										<div class="sLogos__slide swiper-slide bg-wrap">
+											<picture>
+												<source class="swiper-lazy" srcset="#" data-srcset="img/@2x/webp/logo-2.webp" type="image/webp"/><img class="swiper-lazy" src="#" data-src="img/@2x/logo-2.jpg" alt=""/>
+											</picture>
+										</div>
+										<div class="sLogos__slide swiper-slide bg-wrap">
+											<picture>
+												<source class="swiper-lazy" srcset="#" data-srcset="img/@2x/webp/logo-3.webp" type="image/webp"/><img class="swiper-lazy" src="#" data-src="img/@2x/logo-3.jpg" alt=""/>
+											</picture>
+										</div>
+										<div class="sLogos__slide swiper-slide bg-wrap">
+											<picture>
+												<source class="swiper-lazy" srcset="#" data-srcset="img/@2x/webp/logo-4.webp" type="image/webp"/><img class="swiper-lazy" src="#" data-src="img/@2x/logo-4.jpg" alt=""/>
+											</picture>
+										</div>
+										<div class="sLogos__slide swiper-slide bg-wrap">
+											<picture>
+												<source class="swiper-lazy" srcset="#" data-srcset="img/@2x/webp/logo-5.webp" type="image/webp"/><img class="swiper-lazy" src="#" data-src="img/@2x/logo-5.jpg" alt=""/>
+											</picture>
+										</div>
+										<div class="sLogos__slide swiper-slide bg-wrap">
+											<picture>
+												<source class="swiper-lazy" srcset="#" data-srcset="img/@2x/webp/logo-6.webp" type="image/webp"/><img class="swiper-lazy" src="#" data-src="img/@2x/logo-6.jpg" alt=""/>
+											</picture>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
+									<svg class="icon icon-chevron-left ">
+										<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+									</svg>
+								</div>
+								<div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
+									<svg class="icon icon-chevron-right ">
+										<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+									</svg>
+								</div>
+							</div>
 						</div>
-						<div class="row"></div>
-					</div>
-				</section>
-				<!-- end sLogos-->
+					</section>
+					<!-- end sLogos-->
+				</div>
 				<!-- start sInstallments-->
 				<section class="sInstallments section" id="sInstallments">
 					<div class="container">
@@ -353,12 +498,6 @@
 		<div class="d-none">
 			<div class="form-wrap modal-win modal-form" id="modal-call">
 				<form>
-					<input type="hidden" name="example-input-field"/>
-					<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
-					<input class="utm_source" type="hidden" name="utm_source"/>
-					<input class="utm_term" type="hidden" name="utm_term"/>
-					<input class="utm_medium" type="hidden" name="utm_medium"/>
-					<input class="utm_campaign" type="hidden" name="utm_campaign"/>
 					<div class="text-center">
 						<div class="form-wrap__title h3 ttu">Обратный звонок
 						</div>
@@ -370,9 +509,7 @@
 					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="Ваш телефон" name="tel" required="required"/>
 					</div>
 					<!-- +e.input-wrap--><input class="form-wrap__btn" type="submit" value="Рассчитать"/>
-					<div class="form-wrap__polite">
-						<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox" checked="checked"/><span class="custom-input__lab"></span><small class="custom-input__text text-secondary">Согласен на обработку и хранение моих персональных данных в соответствии с условиями</small>
-						</label>
+					<div class="form-wrap__polite">Нажимая кнопку «Отправить» вы соглашаетесь с <a href="#">Политикой конфиденциальности</a>
 					</div>
 				</form>
 			</div>

@@ -1,7 +1,7 @@
 .form-wrap{
  	&__input-wrap{
 			// @extend .form-group;
-			
+			margin-bottom: rem(22);
 		}
 		&__input{
 			// @extend .form-control;
@@ -14,7 +14,10 @@
  	label{
  		width: 100%;
  		display: block;
- 	}
+	 }
+	 &__polite{
+		 margin-bottom: rem(24);
+	 }
 }
 
 

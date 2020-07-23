@@ -1,9 +1,20 @@
 mixin sOrder()
 	// start sOrder
-	+b.SECTION.sOrder.section#sOrder&attributes(attributes)
+	+b.SECTION.sOrder.section.bg-wrap#sOrder&attributes(attributes)
+		+pic('form-bg.jpg','bg','lazy',0)(class="picture-bg ")
 		.container
-			+b.section-title.text-center
-				h2 sOrder
-				
-			.row
+			+e.row.row
+				.col-lg-6
+					+b.section-title
+						h2 заявка на замер
+						+e.text Услуга по бесплатному замеру
+				.col
+					+form-wrap
+						.row
+							.col-sm-6
+								+input('Ваше имя')
+							.col-sm-6
+								+input('Контактный телефон','tel')
+						+polite()
+						+e.BUTTOM.btn(type="submit" ) Отправить
 	// end sOrder

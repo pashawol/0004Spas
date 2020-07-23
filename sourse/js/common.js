@@ -196,6 +196,7 @@ function eventHandler() {
 		...defaultSl,
 		watchOverflow: true,
 		slidesPerView: 1,
+	 
 		loop: true,
 		navigation: {
 			nextEl: '.headerBlock .swiper-button-next',
@@ -209,6 +210,47 @@ function eventHandler() {
 		},
 		thumbs: {
 			swiper: galleryThumbs,
+		},
+	});
+	const swipersCase = new Swiper('.sCases__slider--js', {
+		// slidesPerView: 5,
+		...defaultSl,
+		watchOverflow: true,
+		slidesPerView: 1,
+		breakpoints: { 
+		
+			992: {
+				slidesPerView: 6
+			},
+		},
+		loop: true,
+		navigation: {
+			nextEl: '.sCases .swiper-button-next',
+			prevEl: '.sCases .swiper-button-prev',
+		},
+	});
+	const swiperssLogos = new Swiper('.sLogos__slider--js', {
+		// slidesPerView: 5,
+		...defaultSl,
+		watchOverflow: true,
+		slidesPerView: 2,
+		breakpoints: { 
+			576: {
+				slidesPerView: 3
+			},
+			
+			768: {
+				slidesPerView: 4
+			},
+
+			992: {
+				slidesPerView: 6
+			},
+		},
+		loop: true,
+		navigation: {
+			nextEl: '.sLogos .swiper-button-next',
+			prevEl: '.sLogos .swiper-button-prev',
 		},
 	});
 

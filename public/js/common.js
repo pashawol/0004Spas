@@ -190,6 +190,40 @@ function eventHandler() {
 			swiper: galleryThumbs
 		}
 	}));
+	var swipersCase = new Swiper('.sCases__slider--js', _objectSpread(_objectSpread({}, defaultSl), {}, {
+		watchOverflow: true,
+		slidesPerView: 1,
+		breakpoints: {
+			992: {
+				slidesPerView: 6
+			}
+		},
+		loop: true,
+		navigation: {
+			nextEl: '.sCases .swiper-button-next',
+			prevEl: '.sCases .swiper-button-prev'
+		}
+	}));
+	var swiperssLogos = new Swiper('.sLogos__slider--js', _objectSpread(_objectSpread({}, defaultSl), {}, {
+		watchOverflow: true,
+		slidesPerView: 2,
+		breakpoints: {
+			576: {
+				slidesPerView: 3
+			},
+			768: {
+				slidesPerView: 4
+			},
+			992: {
+				slidesPerView: 6
+			}
+		},
+		loop: true,
+		navigation: {
+			nextEl: '.sLogos .swiper-button-next',
+			prevEl: '.sLogos .swiper-button-prev'
+		}
+	}));
 	var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
 
 	if (isIE11) {

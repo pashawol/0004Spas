@@ -13,14 +13,14 @@ include ../blocks/sInstallments/_sInstallments.pug
 block variables
 	- let  mainPage= null
 block title
-	- let  title= 'title'
+	- let  title= 'Главная'
 	title= title
 block pagecontent 
 	aside
 		+mob-mnu()
 		+top-nav()
 	main
-		+headerBlock()
+		+pageHead()
 		+sCatalog
 		+sOrder
 		+sAbout

@@ -47,3 +47,10 @@ mixin contactBlock()
 			a.h6.text-body(href="mailto:info@gmail.com ") info@gmail.com 
 		+contactBlockGroup('','мы в соц сетях')
 			block
+
+mixin pageHead(img,t)
+	+b.pageHead.bg-wrap
+		+pic(`${img}`,'bg','',0)(class="picture-bg")
+		.container
+			h1!= t
+			+breadcrumb("Главная", t)

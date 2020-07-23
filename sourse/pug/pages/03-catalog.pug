@@ -1,0 +1,45 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug 
+include ../blocks/sCatalog/_sCatalog.pug 
+include ../blocks/sOrder/_sOrder.pug 
+include ../blocks/sAbout/_sAbout.pug 
+include ../blocks/sCases/_sCases.pug 
+include ../blocks/sLogos/_sLogos.pug 
+include ../blocks/sInstallments/_sInstallments.pug 
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'деревянные окна'
+	title= title
+block pagecontent 
+	aside
+		+mob-mnu()
+		+top-nav()
+	main
+		+pageHead('head-bg-catalog',title)
+		+sContent
+		+sCatalog
+			.row
+				- for (var x = 0; x < 2; x++)
+					+e.col.col-lg-3.col-sm-6
+						+itemProd(`5`,`Дверь из&nbsp;массива сосны Порта-21-CP без отделки`,``)
+							+e.text отборный массив сосны, без сучков, различный распил
+					+e.col.col-lg-3.col-sm-6
+						+itemProd(`6`,`Дверь из&nbsp;массива сосны Порта-23-CP без отделки `,``)
+							+e.text отборный массив сосны, без сучков, различный распил
+					+e.col.col-lg-3.col-sm-6
+						+itemProd(`7`,`Дверь из&nbsp;массива сосны М-7&nbsp;ДГ без отделки `,``)
+							+e.text Клееный массива сосны, без сучков, поставляется без отделки.
+					+e.col.col-lg-3.col-sm-6
+						+itemProd(`8`,`Балконный блок `)
+			+e.btn(href="#") Подробнее
+			p  #[strong Производятся из качественного 3-х слойного клееного бруса] (категории "В"), сырьем служит ангарская сосна, лиственница или дуб. 
+			p Древесина проходит тщательный отбор, чтобы исключить наличие сучков, микротрещин и дефектов на поверхности изделия.  Брус производится методом склеивания трех ламелей, это придает ему высокую прочность, поэтому готовое окно не будет менять своей геометрии из-за высокой влажности или, наоборот, аномальной сухости.
+			p Древесина проходит тщательный отбор, чтобы исключить наличие сучков, микротрещин и дефектов на поверхности изделия.  Брус производится методом склеивания трех ламелей, это придает ему высокую прочность, поэтому готовое окно не будет менять своей геометрии из-за высокой влажности или, наоборот, аномальной сухости.
+		+sForm()
+		+footer()
+	

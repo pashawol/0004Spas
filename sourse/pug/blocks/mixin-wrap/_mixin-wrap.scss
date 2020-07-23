@@ -85,3 +85,37 @@
 		margin-bottom: rem(30);
 	}
 }
+
+
+.pageHead{
+	color: #ffffff;
+	background-color: $body-color;
+	padding-top: rem(130);
+	padding-bottom: rem(40);
+	a{
+		color: #ffffff !important;
+		text-transform: uppercase;
+		font-size: $small; 
+		text-transform: uppercase;
+		// Text style for "Г, лавная"
+		letter-spacing: rem(1.4px);
+		font-weight: 800;
+	}
+	h1{
+		letter-spacing: rem(6px);
+		text-transform: uppercase;
+		font-weight: 800;
+		&::after {
+			content: '';
+			width: 132px;
+			height: 2px;
+			background-color: $white;
+			display: block;
+			margin-top: em(7);
+			margin-bottom: em(5);
+		}
+	}
+	picture{
+		opacity: 0.6;
+	}
+}

@@ -1,6 +1,6 @@
 {
   "name": "mega-front-starter",
-  "version": "5",
+  "version": "5.0.0",
   "description": "Gulp Bootstrap5 scss Pug",
   "main": "block.js",
   "scripts": {

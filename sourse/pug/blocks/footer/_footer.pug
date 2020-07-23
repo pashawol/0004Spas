@@ -1,4 +1,44 @@
 mixin footer()
 	+b.FOOTER.footer.block-with-lazy
 		.container
-			h2 footer
+			+e.A.mob-logo(href='/')
+				img.lazy(src="#" data-src="img/@2x/logo.jpg" alt="")
+			+e.main-row.row
+				.col-lg-4
+					+e.A.logo(href="#")
+						img.lazy(src='#' data-src="img/@2x/.jpg" alt="")
+					+e.all-rights-txt Компания СПАС&nbsp;&mdash; деревянные евроокна премиум класса Все права защищены &copy;&nbsp;2020г.
+					+e.company-creator
+						span Создание сайта компания "Алроникс"
+						img.lazy(src="" data-src="img/@2x/creator-logo.png" alt="")
+				.col-lg-8
+					+e.menu
+						ul
+							li: a(href='#') Каталог
+							li: a(href='#') О компании
+							li: a(href='#') Дилерам
+							li: a(href='#') Наши работы
+							li: a(href='#') Статьи
+							li: a(href='#') Контакты
+							li: a(href='#')
+							li: a(href='#')
+					+e.contants-row.row
+						.col-lg-5
+							+footerContItem('', 'ардес')
+						.col-lg-4
+							+footerContItem('', 'телефон')
+						.col-lg-3
+							+footerContItem('', 'мы в соц сетях')
+						.col-lg-5
+							+footerContItem('', 'время работы')
+						.col-lg-4
+							+footerContItem('', 'e-mail')
+
+
+mixin footerContItem(iconName, itemName)
+	+e.cont-item
+		+e.item-header
+			+icon(iconName)
+			span=itemName
+		+e.item-content
+			block

@@ -1,9 +1,28 @@
 mixin sForm()
 	// start sForm
 	+b.SECTION.sForm.section#sForm&attributes(attributes)
+		+e.section-bg
+			img.lazy(src='#' data-src="img/@2x/form-bg2.jpg" alt="")
 		.container
-			+b.section-title.text-center
-				h2 sForm
-				
-			.row
+			+e.row.row
+				.col-lg-4
+					+b.section-title
+						h2 У вас остались вопросы?
+						p Заполните форму обратной связи и наши менеджеры свяжутся с вами.
+				+e.inputs-col.col-lg-8
+					+form-wrap()
+						+e.top-inps-cont
+							+input('', 'text', 'Имя', 'name')
+							+input('', 'tel', 'телефон')
+							+input('', 'mail', 'e-mail')
+						//+input('', 'textarea', 'сообщение', 'message')
+						+e.LABEL.ta-label
+							+e.title сообщение
+							textarea.form-wrap__input.form-control.ta
+						+e.policy-cont
+							+e.policy
+								| Нажимая кнопку «Отправить» вы соглашаетесь с
+								|
+								a(href='#') Политикой конфиденциальности
+							+e.BUTTON.send-bnt(type="submit") Отправить
 	// end sForm

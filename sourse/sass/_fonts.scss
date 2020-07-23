@@ -1,8 +1,13 @@
 $default-font: "BlissPro";
+$Lato: 'Lato';
 // $file-form: ($file-formats: woff2 woff ttf);
 $addr: '../fonts/';
 $file-format: woff2;
 
+//Lato
+@include font-face ($default-font, $addr + "Lato-Regular", $file-formats: $file-format);
+
+//default font
 @include font-face ($default-font, $addr + "BlissPro", $file-formats: $file-format);
 @include font-face ($default-font, $addr + "BlissPro-Bold", bold, $file-formats: $file-format);
 @include font-face ($default-font, $addr + "BlissPro-Heavy", 800, $file-formats: $file-format);

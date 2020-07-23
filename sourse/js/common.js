@@ -97,18 +97,7 @@ const JSCCommon = {
 		}
 	},
 	// /mobileMenu
-
-	// табы  . 
-	tabscostume(tab) {
-		$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
-			$(this)
-				.addClass('active').siblings().removeClass('active')
-				.closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
-				.eq($(this).index()).show().addClass('active');
-
-		});
-	},
-	// /табы  
+ 
 	inputMask() {
 		// mask for input
 		$('input[type="tel"]').attr("pattern", "[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask("+9(999)999-99-99");
@@ -119,8 +108,7 @@ const JSCCommon = {
 
 function eventHandler() { 
 	JSCCommon.modalCall();
-
-	JSCCommon.tabscostume('tabs');
+ 
 
 	JSCCommon.mobileMenu();
 
@@ -253,8 +241,53 @@ function eventHandler() {
 			prevEl: '.sLogos .swiper-button-prev',
 		},
 	});
+ 
 
-  
+	// function tabSlider(){
+	function tabscostume(tab) {
+		var params = {
+			// init: false
+			...defaultSl,
+			watchOverflow: true,
+			slidesPerView: 1,
+			breakpoints: {
+
+				992: {
+					slidesPerView: 6
+				},
+			},
+			loop: true,
+			navigation: {
+				nextEl: '.tabs__content.active .swiper-button-next',
+				prevEl: '.tabs__content.active .swiper-button-prev',
+			},
+		}
+		var mySwiper = new Swiper($(".tabs__content.active").find('.tab-slider-js'), params);
+
+		$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
+			$(this)
+				.addClass('active').siblings().removeClass('active')
+				.closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
+				.eq($(this).index()).addClass('active').fadeIn(function () {
+					var slider = $(this).find('.tab-slider-js');
+					if (slider.hasClass("swiper-container-initialized")) {
+						mySwiper.update();
+					}
+					else {
+						mySwiper = new Swiper(slider, params);
+					}
+				});
+			// swiper6.destroy();
+		});
+
+		// }
+		// mySwiper.on('init', function() { /* do something */ });
+		// // mySwiper.slideNext();
+		// mySwiper.init();
+	}
+
+	tabscostume('tabs');
+
 
 	var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
 	if (isIE11) {

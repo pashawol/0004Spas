@@ -2,7 +2,7 @@
 	// start .sCases
 	.sCases {
 		--sPT: #{rem(60)};
-		--sPB:0;
+		// --sPB:0;
 			--sTPB: #{rem(40)};
 			--swiperArrowPosition: #{rem(-10)};
 		
@@ -17,13 +17,15 @@
 			width: rem(180);
 
 				@include media-breakpoint-up(md){
+					&--all{
 
-					position: absolute;
-					right: 15px;
-					top: 0;
-					margin-left: 0;
-					margin-right: 0;
-					margin-top: 0;
+						position: absolute;
+						right: 15px;
+						top: 0;
+						margin-left: 0;
+						margin-right: 0;
+						margin-top: 0;
+					}
 				}
 				margin-top: rem(37);
 				margin-left: auto;
@@ -103,3 +105,36 @@
 	@include media-breakpoint-down(xs) {} 
 
 } // end.sCases
+
+.tabs{
+	&__caption{
+		display: flex;
+		justify-content: center;
+		margin-left: rem(-7);
+		margin-right: rem(-7);
+		flex-wrap: wrap;
+		padding-bottom: rem(40);
+	}
+	&__btn{
+		margin-right: rem(7);
+		margin-left: rem(7);
+		border: 2px solid #cfcfcf;
+		background-color: $white;
+		@include mt;
+		font-size: $smallest;
+		font-weight: 700;
+		text-transform: uppercase;
+		// Text style for "о, стеклен"
+		letter-spacing: 1.2px;
+		@extend .btn;
+		padding-left: rem(29);
+		padding-right: rem(29);
+		margin-bottom: rem(20);
+		&:hover,
+		&.active{
+			background-color: $primary;
+			border-color: $primary;
+			color: #ffffff;
+		}
+	}
+}

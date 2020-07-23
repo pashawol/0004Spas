@@ -1,4 +1,55 @@
 mixin footer()
 	+b.FOOTER.footer.block-with-lazy
 		.container
-			h2 footer
+			+e.A.mob-logo.d-lg-none(href='/')
+				img.lazy(src="#" data-src="img/@2x/logo.jpg" alt="")
+			+e.main-row.row
+				.col-lg-4
+					+e.A.logo.d-none.d-lg-flex(href="#")
+						img.lazy(src='#' data-src="img/@2x/logo.jpg" alt="")
+					+e.all-rights-txt
+						| Компания СПАС&nbsp;&mdash; деревянные евроокна премиум класса
+						|
+						br
+						| Все права защищены &copy;&nbsp;2020г.
+					+e.company-creator
+						span Создание сайта компания "Алроникс"
+						img.lazy(src="" data-src="img/@2x/creator-logo.png" alt="")
+				.col-lg-8
+					+e.big-col-content
+						+e.menu
+							ul
+								li: a(href='#') Каталог
+								li: a(href='#') О компании
+								li: a(href='#') Дилерам
+								li: a(href='#') Наши работы
+								li: a(href='#') Статьи
+								li: a(href='#') Контакты
+						+e.contants-row.row
+							.col-lg-5
+								+footerContItem('location', 'ардес')
+									+e.address 424007, г. Йошкар-Ола, ул. Машиностроителей, д.&nbsp;112&nbsp;А
+							.col-lg-4.order-2.order-lg-0
+								+footerContItem('phone', 'телефон')
+									+e.A.call-link(href='tel:+88001000000') 8 (800) 100-00-00
+									+e.order-call(href='#') Заказать звонок
+							.col-lg-3.order-4.order-lg-0
+								+footerContItem(undefined, 'мы в соц сетях')
+									+soc()
+							.col-lg-5.order-1.order-lg-0
+								+footerContItem('clock', 'время работы')
+									+e.working-shedule пн-пт. 9.00-19.00
+							.col-lg-4.order-3.order-lg-0
+								+footerContItem('mail', 'e-mail')
+									+e.A.mail-link(href="mailto:info@gmail.com") info@gmail.com
+
+
+mixin footerContItem(iconName, itemName)
+	+e.cont-item
+		+e.item-header
+			if iconName
+				+e.icon-cont
+					+icon(iconName)
+			span=itemName
+		+e.item-content
+			block

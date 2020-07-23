@@ -33,8 +33,10 @@
 		 }
 		 &__title{
 			 
-			@extend .h5;
+			// @extend .h5;
 			font-weight: 800;
+			min-height: 2em;
+			margin-bottom: 0.5rem;
 		 }
 		 .icon {
 		 	font-size: rem(16);
@@ -51,6 +53,7 @@
 			 font-weight: 700;
 			//  margin-bottom: rem(40);
 			padding-bottom: rem(28);
+			margin-top: auto;
 		 }
 		 &__btn{
 			 @extend .btn;
@@ -58,7 +61,7 @@
 			 margin-left: auto;
 			 margin-right: auto;
 			 width: 100%;
-			 margin-top: auto;
+			//  margin-top: auto;
 			 max-width: rem(180);
 		 }
 

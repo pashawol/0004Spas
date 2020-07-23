@@ -1,7 +1,15 @@
 
 	// start .sContent
 	.sContent {
-		 
+		.h6{
+			font-weight: 800;
+		}
+		 	@include media-breakpoint-up(md) {
+
+		 		--sPT: #{rem(65)};
+		 		--sPB: #{rem(65)};
+		 		// --sTPB: #{rem(56)};
+		 	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

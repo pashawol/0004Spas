@@ -2,6 +2,23 @@
 	// start .sCatalog
 	.sCatalog {
 		 background-color: $light;
+		 &__btn{
+				@extend .btn;
+				@extend .btn-outline-primary;
+				@extend .btn-block;
+				width: 180px;
+				margin-left: auto;
+				margin-right: auto;
+				margin-bottom: rem(60);
+		}
+		p{
+			color: $secondary;
+			strong{
+				color: $body-color;
+				text-transform: uppercase;
+				font-weight: 800;
+			}
+		}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

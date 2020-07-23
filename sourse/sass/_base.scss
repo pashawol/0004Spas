@@ -20,7 +20,8 @@ html {
 }
 
 .headerBlock__slide{
-	// min-height: 1008px !important;
+	height: 991px !important;
+	max-height: 991px !important;
 }
 body,
 html {
@@ -37,6 +38,19 @@ html {
 
 .section-title { 
 	padding-bottom: var(--sTPB);
+	h2{
+		font-weight: 800;
+		text-transform: uppercase;
+		line-height: 1;
+		&::after{
+			content: '';
+			display: block;
+			width: 132px;
+			height: 2px;
+			background-color: $body-color;
+			margin-top: em(14);
+		}
+	}
 }
 
 body {
@@ -124,12 +138,12 @@ body {
 	overflow: hidden;
 	min-height: 100vh;
 	min-height: calc(var(--vh, 1vh) * 100);
-	@include media-breakpoint-up(lg) {
+	@include media-breakpoint-up(xxl) {
 
 		display: flex;
 	}
 }
-@include media-breakpoint-up(lg) {
+@include media-breakpoint-up(xxl) {
 
 	:root{
 		--asideW: #{rem(220)};
@@ -446,5 +460,6 @@ iframe {
 	text-transform: uppercase;
 	font-weight: bold;
 }
-.btn-outline-white{ 
+.btn-outline-primary{ 
+	color: $body-color;
 }

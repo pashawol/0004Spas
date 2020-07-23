@@ -3,14 +3,16 @@
 	--fontSizeBase: #{$em-base};
 	@include media-breakpoint-up(md) {
 
-		--sPT: #{rem(80)};
-		--sPB: #{rem(90)};
-		--sTPB: #{rem(40)};
 	}
+	--sPT: #{rem(78)};
+		@include media-breakpoint-up(md) {
 
-	--sPT: #{rem(80 / 2)};
-	--sPB: #{rem(90 / 2)};
-	--sTPB: #{rem(40 / 2)};
+			--sPB: #{rem(105)};
+			--sTPB: #{rem(56)};
+		}
+		--sPB: #{rem(70)};
+	--sTPB: #{rem(45)};
+ 
 
 
 		--swiperArrowSize: #{rem(10)};

@@ -32,20 +32,24 @@
 					<div class="top-nav__inner"><a class="top-nav__logo" href="/"><img src="img/@2x/logo.jpg" alt=""/></a>
 						<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><small>МЕНЮ</small><span></span>
 						</div>
-						<ul class="top-nav__nav" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-							<li class="top-nav__item" itemprop="item"><a class="top-nav__link active" href="#" itemprop="url">Каталог</a>
-							</li>
-							<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#" itemprop="url">О компании</a>
-							</li>
-							<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#" itemprop="url">Дилерам</a>
-							</li>
-							<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#" itemprop="url">Наши работы</a>
-							</li>
-							<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#" itemprop="url">Статьи</a>
-							</li>
-							<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#" itemprop="url">Контакты</a>
-							</li>
-						</ul>
+						<div class="top-nav__menu-wrap">
+							<div class="top-nav__menu-block">
+								<ul class="top-nav__nav" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+									<li class="top-nav__item" itemprop="item"><a class="top-nav__link active" href="#" itemprop="url">Каталог</a>
+									</li>
+									<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#" itemprop="url">О компании</a>
+									</li>
+									<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#" itemprop="url">Дилерам</a>
+									</li>
+									<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#" itemprop="url">Наши работы</a>
+									</li>
+									<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#" itemprop="url">Статьи</a>
+									</li>
+									<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#" itemprop="url">Контакты</a>
+									</li>
+								</ul>
+							</div>
+						</div>
 						<div class="searchBlock">
 							<form action="">
 								<input type="text" placeholder="Поиск"/>
@@ -187,7 +191,7 @@
 					</div>
 					<div class="headerBlock__foot-slider gallery-thumbs swiper-container">
 						<div class="swiper-wrapper">
-								<div class="headerBlock__slide-sm swiper-slide" style="color:#d49873">
+								<div class="headerBlock__slide-sm col-xl-4 col-sm-auto swiper-slide" style="color:#d49873">
 									<div class="headerBlock__item">
 										<div class="row">
 											<div class="col">
@@ -198,7 +202,7 @@
 										</div><a class="headerBlock__btn headerBlock__btn--more" href="#">подробнее</a>
 									</div>
 								</div>
-								<div class="headerBlock__slide-sm swiper-slide" style="color:#d86e33">
+								<div class="headerBlock__slide-sm col-xl-4 col-sm-auto swiper-slide" style="color:#d86e33">
 									<div class="headerBlock__item">
 										<div class="row">
 											<div class="col">
@@ -209,7 +213,7 @@
 										</div><a class="headerBlock__btn headerBlock__btn--more" href="#">подробнее</a>
 									</div>
 								</div>
-								<div class="headerBlock__slide-sm swiper-slide" style="color:#b85320">
+								<div class="headerBlock__slide-sm col-xl-4 col-sm-auto swiper-slide" style="color:#b85320">
 									<div class="headerBlock__item">
 										<div class="row">
 											<div class="col">
@@ -227,10 +231,55 @@
 				<!-- start sCatalog-->
 				<section class="sCatalog section" id="sCatalog">
 					<div class="container">
-						<div class="section-title text-center">
-							<h2>sCatalog</h2>
+						<div class="section-title">
+							<h2>Виды деревянных окон</h2>
 						</div>
-						<div class="row"></div>
+						<div class="row">
+							<div class="sCatalog__col col-lg-3 col-sm-6"><a class="prodItem" href="#">
+								<picture>
+									<source class="lazy" srcset="#" data-srcset="img/@2x/webp/prod-1.webp" type="image/webp"/><img class="lazy" src="#" data-src="img/@2x/prod-1.png" alt=""/>
+								</picture>
+								<div class="prodItem__title">Одностворчатое окно
+								</div>
+								<div class="prodItem__text"> Размер 750*1500 мм<br/>Клееный брус, 3 слоя 76 мм
+								</div>
+								<div class="prodItem__price">от 11 150 ₽
+								</div><span class="prodItem__btn">Подробнее</span></a>
+							</div>
+							<div class="sCatalog__col col-lg-3 col-sm-6"><a class="prodItem" href="#">
+								<picture>
+									<source class="lazy" srcset="#" data-srcset="img/@2x/webp/prod-2.webp" type="image/webp"/><img class="lazy" src="#" data-src="img/@2x/prod-2.png" alt=""/>
+								</picture>
+								<div class="prodItem__title">Двустворчатое  окно
+								</div>
+								<div class="prodItem__text"> Размер 750*1500 мм<br/>Клееный брус, 3 слоя 76 мм
+								</div>
+								<div class="prodItem__price">от 11 150 ₽
+								</div><span class="prodItem__btn">Подробнее</span></a>
+							</div>
+							<div class="sCatalog__col col-lg-3 col-sm-6"><a class="prodItem" href="#">
+								<picture>
+									<source class="lazy" srcset="#" data-srcset="img/@2x/webp/prod-3.webp" type="image/webp"/><img class="lazy" src="#" data-src="img/@2x/prod-3.png" alt=""/>
+								</picture>
+								<div class="prodItem__title">Трехстворчатое окно
+								</div>
+								<div class="prodItem__text"> Размер 750*1500 мм<br/>Клееный брус, 3 слоя 76 мм
+								</div>
+								<div class="prodItem__price">от 11 150 ₽
+								</div><span class="prodItem__btn">Подробнее</span></a>
+							</div>
+							<div class="sCatalog__col col-lg-3 col-sm-6"><a class="prodItem" href="#">
+								<picture>
+									<source class="lazy" srcset="#" data-srcset="img/@2x/webp/prod-4.webp" type="image/webp"/><img class="lazy" src="#" data-src="img/@2x/prod-4.png" alt=""/>
+								</picture>
+								<div class="prodItem__title">Балконный блок 
+								</div>
+								<div class="prodItem__text"> Размер 750*1500 мм<br/>Клееный брус, 3 слоя 76 мм
+								</div>
+								<div class="prodItem__price">от 11 150 ₽
+								</div><span class="prodItem__btn">Подробнее</span></a>
+							</div>
+						</div>
 					</div>
 				</section>
 				<!-- end sCatalog-->

@@ -1,9 +1,35 @@
+mixin itemProd(i, t,  sl)
+	+b.prodItem(href="#")
+		picture
+			if sl
+				source.swiper-lazy(srcset="#" data-srcset=`img/@2x/webp/prod-${i}.webp` type="image/webp")
+				img.swiper-lazy(src="#" data-src=`img/@2x/prod-${i}.png`, alt="")
+			else
+				source.lazy(srcset="#" data-srcset=`img/@2x/webp/prod-${i}.webp` type="image/webp")
+				img.lazy(src="#" data-src=`img/@2x/prod-${i}.png`, alt="") 
+		+e.DIV.title= t
+		+e.DIV.text  Размер 750*1500 мм
+			br
+			| Клееный брус, 3 слоя 76 мм
+		+e.DIV.price от 11 150 ₽
+		+e.btn Подробнее
+		
 mixin sCatalog()
 	// start sCatalog
 	+b.SECTION.sCatalog.section#sCatalog&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sCatalog
+			+b.section-title
+				h2 Виды деревянных окон
 				
 			.row
+				+e.col.col-lg-3.col-sm-6
+					+itemProd('1','Одностворчатое окно')
+				+e.col.col-lg-3.col-sm-6
+					+itemProd('2','Двустворчатое  окно')
+				+e.col.col-lg-3.col-sm-6
+					+itemProd('3','Трехстворчатое окно')
+				+e.col.col-lg-3.col-sm-6
+					+itemProd('4','Балконный блок ')
+				//- +e.col.col-3
+				//- 	+itemProd('4','Балконный блок ')
 	// end sCatalog

@@ -25,7 +25,9 @@ mixin top-nav()
 				small МЕНЮ
 
 				span
-			+mnu()
+			+e.menu-wrap
+				+e.menu-block
+					+mnu()
 			+search
 			+contactBlock()
 				+soc()

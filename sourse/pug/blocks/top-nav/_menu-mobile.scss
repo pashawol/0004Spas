@@ -1,16 +1,26 @@
 // мобильное меню
 
 // мобильное меню
-$h: em(2);
+$h:  2px;
 
 .toggle-menu-mobile {
 	display: block;
 	height: $h* 12;
 	position: relative;
-	color: $primary;
+	color: $body-color;
 	font-size: 32px;
+	width: 90px;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	align-items: center;
+	margin-bottom: 23px;
+	cursor: pointer;
 	small{
 		font-size: $h6-font-size;
+		font-weight: bold;
+		display: block;
+		margin-right: rem(15);
 	}
 	&.on {
 		// color: #ffffff;
@@ -24,17 +34,18 @@ $h: em(2);
 	}
 
 	span {
-		@include a-cent(y);
+		// @include a-cent(y);
+	 
 	}
 
 	span:before {
 
 
-		top: $h * 2;
+		top: $h * 3;
 	}
 
 	span:after {
-		bottom: $h * 2;
+		bottom: $h * 3;
 	}
 
 	span {
@@ -46,7 +57,7 @@ $h: em(2);
 	span:after,
 	span:before {
 		// width: 32px;
-		width: 1em;
+		width: 20px;
 		height: $h;
 		background-color: currentColor;
 		transition: all 0.3s;

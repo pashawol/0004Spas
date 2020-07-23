@@ -63,6 +63,11 @@
 	
 	
 	--thumbH: #{rem(250)};
+	@include media-breakpoint-up(sm){
+
+		--thumbHPb: calc(#{rem(250)});
+	}
+	--thumbHPb: calc(#{rem(250)} * 3);
 	&__slide{
 		@include media-breakpoint-up(lg) {
 
@@ -73,9 +78,12 @@
 			justify-content: space-between;
 			flex-wrap: nowrap;
 		}
-		min-height: 100vh;
-		min-height: calc(var(--vh, 1vh) * 100);
-		padding-bottom: calc( 1 * var(--thumbH) + #{rem(35)});
+		@include media-breakpoint-up(xl) {
+
+			min-height: 100vh;
+			min-height: calc(var(--vh, 1vh) * 100);
+		}
+		padding-bottom: calc(1 * var(--thumbHPb) + #{rem(115)});
 	}
 	&__slide-sm{
 		border: 1px solid rgba($color: $white, $alpha: .5);
@@ -103,6 +111,10 @@
 			}
 		}
 		&.swiper-slide-thumb-active {
+				.headerBlock__btn--more{
+					opacity: 1;
+					pointer-events: painted;
+				}
 				img{
 					opacity: 1;
 				}
@@ -141,6 +153,12 @@
 		// height: var(--thumbH);
 		z-index: 4;
 		position: relative;
+			@include media-breakpoint-down(sm) {
+				.swiper-wrapper{
+					display: block;
+					transform: translate3d(0px, 0px, 0px) !important;
+				}
+			}
 	}
 	--swiperArrowPosition: 0;
 	--swiperColorDef: #fff;
@@ -148,13 +166,24 @@
 		position: relative;
 		max-width: rem(280);
 		height: 1rem;
-		margin-top: calc(-1 * var(--thumbH) - #{rem(95)});
+
+		margin-top: calc(-1 * var(--thumbHPb) - #{rem(95)});
+		@include media-breakpoint-down(sm){
+			margin-top: calc(-1 * var(--thumbHPb) - #{rem(75)});
+			margin-left: auto;
+				margin-right: auto;
+				margin-bottom: rem(62);
+			}
 		margin-bottom: rem(82);
 
 		.swiper-button-hand{
 
 			margin-top: 0;
 		}
+	}
+	&__btn--more{
+		pointer-events: none;
+		opacity: 0;
 	}
 	@include media-breakpoint-up(xl) {}
 	

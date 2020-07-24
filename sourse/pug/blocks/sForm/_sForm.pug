@@ -26,3 +26,62 @@ mixin sForm()
 								a(href='#') Политикой конфиденциальности
 							+e.BUTTON.send-bnt(type="submit") Отправить
 	// end sForm
+
+mixin sFormDealers()
+	// start sForm
+	+b.SECTION.sForm.section#sForm&attributes(attributes)
+		+e.section-bg
+			img.lazy(src='#' data-src="img/@2x/form-bg2.jpg" alt="")
+		.container
+			+e.row.row
+				.col-lg-4
+					+b.section-title
+						h2 Хотите стать дилером?
+						p
+							| Напишите нам и&nbsp;мы&nbsp;обязательно
+							br
+							| свяжемся с&nbsp;вами
+				+e.inputs-col.col-lg-8
+					+form-wrap()
+						+e.LABEL.top-inp-label.req
+							+e.title ФИО/Организация
+							input.form-wrap__input.form-control(required)
+						+e.top-inps-cont
+							+inputReq('', 'text', 'Имя', 'name')(required)
+							+inputReq('', 'tel', 'телефон')(required)
+							+inputReq('', 'mail', 'e-mail')(required)
+						+e.LABEL.ta-label.req
+							+e.title сообщение
+							textarea.form-wrap__input.form-control.ta(required)
+						+e.policy-cont
+							+e.policy
+								| Нажимая кнопку «Отправить» вы соглашаетесь с
+								|
+								a(href='#') Политикой конфиденциальности
+							+e.BUTTON.send-bnt(type="submit") Отправить
+
+mixin grayForm()
+	// start sForm
+	+b.SECTION.sForm.sForm--gray.section#sForm&attributes(attributes)
+		.container
+			+e.row.row
+				.col-lg-4
+					+b.section-title
+						h2 У вас остались вопросы?
+						p Заполните форму обратной связи и наши менеджеры свяжутся с вами.
+				+e.inputs-col.col-lg-8
+					+form-wrap()
+						+e.top-inps-cont
+							+input('', 'text', 'Имя', 'name')
+							+input('', 'tel', 'телефон')
+							+input('', 'mail', 'e-mail')
+						//+input('', 'textarea', 'сообщение', 'message')
+						+e.LABEL.ta-label
+							+e.title сообщение
+							textarea.form-wrap__input.form-control.ta
+						+e.policy-cont
+							+e.policy
+								| Нажимая кнопку «Отправить» вы соглашаетесь с
+								|
+								a(href='#') Политикой конфиденциальности
+							button.send-bnt-pr(type="submit") Отправить

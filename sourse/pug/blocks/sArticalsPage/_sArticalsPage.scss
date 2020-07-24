@@ -4,7 +4,6 @@
 	--sPT: #{0};
 	--sPB: #{0};
 
-
 	&__header{
 		position: relative;
 		color: $white;
@@ -50,8 +49,12 @@
 	.section-title{
 		--sTPB: #{12px};
 		h2{
-			font-size: rem(60px);
-			letter-spacing: 6px;
+			font-size: rem(30px);
+			letter-spacing: 3px;
+			@include media-breakpoint-up(sm){
+				font-size: rem(60px);
+				letter-spacing: 6px;
+			}
 		}
 		h2:after{
 			margin-top: rem(43px);
@@ -275,8 +278,10 @@
 	padding: 0;
 
 	display: flex;
+	flex-wrap: wrap;
 	align-items: center;
 	&-item{
+
 		&:last-child:after{
 			content: none;
 		}

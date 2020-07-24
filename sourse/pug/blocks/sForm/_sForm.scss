@@ -18,6 +18,43 @@
 		--sPT: #{rem(83px)};
 	}
 
+	//gray form
+	&--gray{
+		background: $light;
+		color: $body-color;
+
+		.section-title{
+			h2:after{
+				background-color: $body-color !important;
+			}
+
+			p{
+				//color: #636363;
+				color: $secondary;
+			}
+		}
+
+		.form-wrap__policy{
+			a{
+				color: $body-color !important;
+				&:hover{
+					color: $primary !important;
+				}
+			}
+		}
+	}
+
+	.send-bnt-pr{
+		@extend .btn;
+		@extend .btn-outline-primary;
+
+		width: 100%;
+		@include media-breakpoint-up(sm){
+			width: 140px;
+		}
+	}
+	//
+
 	&__section-bg{
 		position: absolute;
 		z-index: 0;
@@ -86,6 +123,18 @@
 	}
 	//form-col
 	.form-wrap{
+		//dealers
+		&__top-inp-label{
+			margin-bottom: 27px;
+			@include media-breakpoint-up(md){
+				margin-bottom: rem(24px);
+			}
+		}
+
+
+
+		//end dealers
+
 
 		&__title{
 			display: block;
@@ -113,6 +162,27 @@
 			}
 		}
 
+		.req{
+			position: relative;
+			&:after{
+				content: '*';
+				position: absolute;
+				right: 17px;
+				top: 52px;
+				width: 8px;
+				height: 8px;
+
+				line-height: 1;
+				color: $dot-red;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			input, textarea{
+				padding-right: 30px;
+			}
+		}
+
 		&__input{
 			box-shadow: none;
 			border-radius: 0;
@@ -128,7 +198,6 @@
 		//ta
 		&__input.ta{
 			height: 120px;
-
 		}
 		//
 		&__policy-cont{
@@ -176,6 +245,9 @@
 			padding: rem(8px) rem(26px);
 		}
 	}
+
+
+
 
 
 	@include media-breakpoint-up(xl) {}

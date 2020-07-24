@@ -1,0 +1,39 @@
+mixin sArticalsPage()
+	// start sArticalsPage
+	+b.SECTION.sArticalsPage.section#sArticalsPage&attributes(attributes)
+		+e.header
+			+e.header-bg
+				img.lazy(src='#' data-src="img/@2x/head-bg-catalog.jpg" alt="")
+			.container
+				+b.section-title
+					h2 Статьи
+				block
+		+e.white-strip
+			.container
+				+e.white-st-headline Компания работает на&nbsp;рынке пластиковых окон с&nbsp;2003&nbsp;года.
+				+e.white-st-txt
+					p Мы&nbsp;ставим перед собой задачу не&nbsp;просто нести тепло и&nbsp;уют в&nbsp;Ваши дома. Прежде всего мы&nbsp;хотим помочь Вам сделать осознанный, а&nbsp;значит правильный выбор при заказе&nbsp;остекления
+		+e.articals
+			.container
+				+e.row.row
+					+articalItem('installments-img')
+					+articalItem('artical-card-img')
+					+articalItem('installments-img')
+					+articalItem('installments-img')
+					+articalItem('artical-card-img')
+					+articalItem('installments-img')
+				+e.A.show-more-btn(href='#') показать еще
+
+	// end sArticalsPage
+
+mixin articalItem(imgName)
+	.col-lg-4.col-sm-6
+		+e.artical-card-cont
+			+e.A.artical-card(href='#')
+				+e.card-img
+					img.lazy(src="#" data-src=`img/@2x/${imgName}.jpg` alt="")
+				+e.hidden-block
+					+e.learn-more-btn подробнее
+			+e.txt-content
+				+e.A.card-title(href='#') преимущества перед другими московскими оконными компаниями
+				+e.card-date 29 июня 2020

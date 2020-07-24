@@ -2,11 +2,14 @@
 
   padding: 53px 0 55px 0;
   @include media-breakpoint-up(sm){
-    padding: rem(50) 0;
+    padding: rem(42) 0;
   }
+
+  /*
   @include media-breakpoint-up(xxl){
     padding: 42px 0 212px 0; // fix later
   }
+  */
 
   .container{
     @include media-breakpoint-up(xxl){

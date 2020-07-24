@@ -196,9 +196,9 @@ function eventHandler() {
 			clickable: true,
 
 		},
-		thumbs: {
-			swiper: galleryThumbs,
-		},
+		// thumbs: {
+		// 	swiper: galleryThumbs,
+		// },
 	});
 	const swipersCase = new Swiper('.sCases__slider--js', {
 		// slidesPerView: 5,

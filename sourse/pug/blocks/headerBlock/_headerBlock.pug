@@ -32,13 +32,13 @@ mixin headerBlock()
 			.swiper-wrapper
 				mixin item(t,i, color)
 					+e.slide-sm.col-xl-4.col-sm-auto.swiper-slide(style=`color:${color}`)
-						+e.item
+						+e.item(href="#")
 							.row
 								.col
-									+e.title--sm= t
+									+e.DIV.title--sm= t
 								.col-auto
 									img(src=`img/svg/cat-${i}.svg`, alt="") 
-							+e.btn--more(href="#") подробнее
+							+e.btn--more подробнее
 				+item('Деревянные окна','1', '#d49873')
 				+item('Деревянные двери','2','#d86e33')
 				+item('Деревянные порталы','3','#b85320')

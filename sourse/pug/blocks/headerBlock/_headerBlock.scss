@@ -11,6 +11,7 @@
 		text-transform: uppercase;
 		margin-bottom: 0;
 		line-height: 1;
+		color: #ffffff;
 		&--lg{
 			@extend .h1;
 			margin-bottom: .5em;
@@ -39,7 +40,11 @@
 	p{
 		@extend .h6;
 		font-weight: 300;
-		margin-bottom: em(44);
+			@include media-breakpoint-up(sm){
+
+				margin-bottom: em(44);
+			}
+			margin-bottom: em(44 / 2);
 	}
 	&__caption{
 		max-width: rem(500);
@@ -54,7 +59,10 @@
 		@extend .btn;
 		@extend .btn-outline-white;
 		width: rem(180);
-		margin-top: rem(20);
+		@include media-breakpoint-up(sm){
+
+			margin-top: rem(20);
+		}
 	}
 	.container{
 	}
@@ -82,6 +90,7 @@
 
 			min-height: 100vh;
 			min-height: calc(var(--vh, 1vh) * 100);
+			padding-bottom: calc(1 * var(--thumbHPb) + #{rem(15)});
 		}
 		padding-bottom: calc(1 * var(--thumbHPb) + #{rem(115)});
 	}
@@ -106,9 +115,18 @@
 		}
 		&:hover{
 
-			&::after{
-				height: calc(var(--thumbH) / 2);
-			}
+				.headerBlock__btn--more {
+					opacity: 1;
+					pointer-events: painted;
+				}
+
+				img {
+					opacity: 1;
+				}
+
+				&::after {
+					height: var(--thumbH);
+				}
 		}
 		&.swiper-slide-thumb-active {
 				.headerBlock__btn--more{

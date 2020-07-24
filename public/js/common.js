@@ -177,10 +177,10 @@ function eventHandler() {
 			el: '.headerBlock .swiper-pagination',
 			type: 'bullets',
 			clickable: true
-		},
-		thumbs: {
-			swiper: galleryThumbs
-		}
+		} // thumbs: {
+		// 	swiper: galleryThumbs,
+		// },
+
 	}));
 	var swipersCase = new Swiper('.sCases__slider--js', _objectSpread(_objectSpread({}, defaultSl), {}, {
 		watchOverflow: true,

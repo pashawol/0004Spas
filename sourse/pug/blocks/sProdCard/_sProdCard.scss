@@ -1,0 +1,282 @@
+// start .sProdCard
+.sProdCard {
+	--sPT: #{0};
+	--sPB: #{0};
+
+	&__header{
+		//
+		.section-title{
+			--sTPB: #{12px};
+			h2{
+				font-size: rem(30px);
+				letter-spacing: 3px;
+				@include media-breakpoint-up(sm){
+					font-size: rem(60px);
+					letter-spacing: 6px;
+				}
+
+			}
+			h2:after{
+				margin-top: rem(43px);
+				background-color: $white;
+			}
+		}
+
+		position: relative;
+		color: $white;
+
+		padding: rem(60px) 0 rem(30px) 0;
+		@include media-breakpoint-up(lg){
+			padding: rem(110px) 0 rem(50px) 0;
+		}
+		@include media-breakpoint-up(lg){
+			padding: rem(144px) 0 rem(62px) 0;
+		}
+
+		.container{
+			@include media-breakpoint-up(xxl){
+				padding-left: 5px;
+			}
+		}
+	}
+	&__header-bg{
+		position: absolute;
+		z-index: -1;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: top center;
+		}
+		&:after{
+			content: '';
+			position: absolute;
+			z-index: 0;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0,0,0,.5);
+		}
+	}
+
+	//white-strip
+	&__white-strip{
+		overflow: hidden;
+		position: relative;
+		min-height: 900px;
+
+		padding: rem(30) 0;
+		@include media-breakpoint-up(sm){
+			padding: rem(50) 0;
+		}
+		@include media-breakpoint-up(lg){
+			padding: rem(60px) 0 rem(10px) 0;
+		}
+		.container{
+			@include media-breakpoint-up(xxl){
+				padding-left: 5px;
+				padding-right: 10px;
+			}
+		}
+	}
+	//bg
+	&__top-bg , &__bot-bg{
+		position: absolute;
+		z-index: -1;
+
+		img{
+			width: 100%;
+			height: 100%;
+		}
+	}
+	&__top-bg{
+		width: 757px;
+		height: 1113px;
+
+		top: -702px;
+		left: -372px;
+		@include media-breakpoint-up(base){
+			top: -700px;
+			left: -295px;
+		}
+	}
+	&__bot-bg{
+		width: 921px;
+		height: 998px;
+
+		bottom: -550px;
+		right: -350px;
+		@include media-breakpoint-up(base) {
+			bottom: -550px;
+			right: -275px;
+		}
+	}
+	//
+
+	&__white-st-headline{
+		font-weight: 800;
+		text-transform: uppercase;
+		padding-bottom: rem(16px);
+		font-size: rem(18px);
+
+		line-height: 1.4;
+	}
+	&__white-st-txt{
+		p{
+			color: $secondary;
+			font-weight: 300;
+			font-size: 18px;
+		}
+		p:last-child{
+			margin-bottom: 0;
+		}
+
+		padding-bottom: 54px;
+	}
+
+
+	//row
+	&__row{
+
+	}
+	//component-item
+	&__component-item{
+		display: flex;
+		align-items: stretch;
+		margin-bottom: rem(29);
+
+		&.reverse-item{
+			flex-direction: row-reverse;
+
+			.sProdCard__brand-bl{
+				justify-content: flex-start;
+			}
+			.sProdCard__brand-img-cont{
+				height: 80px;
+			}
+			.sProdCard__comp-img{
+				margin-right: 10px;
+				margin-left: 0;
+			}
+		}
+
+		@include media-breakpoint-down(xl){
+			flex-direction: row-reverse;
+
+			.sProdCard__brand-bl{
+				justify-content: flex-start;
+			}
+			.sProdCard__brand-img-cont{
+				height: 80px;
+			}
+			.sProdCard__comp-img{
+				margin-right: 10px;
+				margin-left: 0;
+			}
+		}
+	}
+	&__brand-bl{
+		flex-grow: 1;
+		//background-color: pink;
+
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+	}
+
+	&__brand-img-cont{
+		position: relative;
+		width: 164px;
+		height: 71px;
+
+		display: flex;
+		align-items: flex-end;
+
+		img{
+			max-width: 100%;
+			max-height: 100%;
+			width: auto;
+			height: auto;
+		}
+	}
+
+	&__brand-headline{
+		background-color: rgba($white, .5);
+		position: absolute;
+		white-space: nowrap;
+		top: 0;
+		left: 0;
+		color: lighten($secondary, 5);
+		font-weight: 800;
+		text-transform: uppercase;
+
+		font-size: 12px;
+		@include media-breakpoint-up(md){
+			font-size: rem(16px);
+		}
+	}
+	&__comp-img{
+		margin-left: 10px;
+		flex-shrink: 0;
+		border-radius: 50%;
+
+		width: rem(80px);
+		height: rem(80px);
+		@include media-breakpoint-up(md){
+			width: rem(101px);
+			height: rem(101px);
+		}
+
+		img{
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+		}
+	}
+
+	//big-wind-img
+	&__big-wind-img{
+		display: flex;
+		width: 100%;
+		img{
+			max-width: 100%;
+			height: auto;
+			margin: auto;
+		}
+	}
+	&__{}
+	&__{}
+	&__{}
+	&__{}
+
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(xs) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(xs) {} 
+
+} // end.sProdCard

@@ -116,7 +116,8 @@ function eventHandler() {
 
 	// JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
-	$(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/04.png);"></div>')
+
+	// $(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/04.png);"></div>')
 	// /добавляет подложку для pixel perfect
 
 
@@ -243,6 +244,34 @@ function eventHandler() {
 		},
 	});
  
+
+	const swiperCertificates = new Swiper('.slider-certificates', {
+		// slidesPerView: 5,
+		...defaultSl,
+		watchOverflow: true,
+		slidesPerView: 2,
+		spaceBetween: 5,
+		breakpoints: { 
+			576: {
+				spaceBetween: 10
+			},
+			
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 30
+			},
+
+			992: {
+				slidesPerView: 4,
+				spaceBetween: 70
+			},
+		},
+		loop: true,
+		navigation: {
+			nextEl: '.sMoreAbout .swiper-button-next',
+			prevEl: '.sMoreAbout .swiper-button-prev',
+		},
+	});
 
 	// function tabSlider(){
 	function tabscostume(tab) {

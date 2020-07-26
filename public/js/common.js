@@ -112,8 +112,8 @@ function eventHandler() {
 	JSCCommon.mobileMenu();
 	JSCCommon.inputMask(); // JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
-
-	$(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/04.png);"></div>'); // /добавляет подложку для pixel perfect
+	// $(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/04.png);"></div>')
+	// /добавляет подложку для pixel perfect
 	// /закрыть/открыть мобильное меню
 
 	function heightses() {
@@ -215,6 +215,29 @@ function eventHandler() {
 		navigation: {
 			nextEl: '.sLogos .swiper-button-next',
 			prevEl: '.sLogos .swiper-button-prev'
+		}
+	}));
+	var swiperCertificates = new Swiper('.slider-certificates', _objectSpread(_objectSpread({}, defaultSl), {}, {
+		watchOverflow: true,
+		slidesPerView: 2,
+		spaceBetween: 5,
+		breakpoints: {
+			576: {
+				spaceBetween: 10
+			},
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 30
+			},
+			992: {
+				slidesPerView: 4,
+				spaceBetween: 70
+			}
+		},
+		loop: true,
+		navigation: {
+			nextEl: '.sMoreAbout .swiper-button-next',
+			prevEl: '.sMoreAbout .swiper-button-prev'
 		}
 	})); // function tabSlider(){
 

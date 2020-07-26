@@ -114,7 +114,6 @@ function eventHandler() {
 	// добавляет подложку для pixel perfect
 
 	$(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/04.png);"></div>'); // /добавляет подложку для pixel perfect
-
 	// /закрыть/открыть мобильное меню
 
 	function heightses() {

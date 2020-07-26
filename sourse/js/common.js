@@ -242,6 +242,7 @@ function eventHandler() {
 		},
 	});
  
+	
 	const swiperCertificates = new Swiper('.slider-certificates', {
 		// slidesPerView: 5,
 		...defaultSl,

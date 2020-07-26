@@ -37,3 +37,15 @@ mixin articalItem(imgName)
 			+e.txt-content
 				+e.A.card-title(href='#') преимущества перед другими московскими оконными компаниями
 				+e.card-date 29 июня 2020
+
+
+mixin sArticalsPage-about(t)
+	// start sArticalsPage
+	+b.SECTION.sArticalsPage.section#sArticalsPage&attributes(attributes)
+		+e.header
+			+e.header-bg
+				img(src="img/@2x/head-bg-catalog.jpg" alt="")
+			.container
+				+b.section-title
+					h2= t
+				block

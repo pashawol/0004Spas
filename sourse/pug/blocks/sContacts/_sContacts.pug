@@ -24,8 +24,7 @@ mixin sContacts()
 					+e.col-content
 						+cSoc()
 		+grayForm()
-		+b.map-block
-			img.lazy(src='#' data-src="img/@2x/map-img-2.jpg" alt="")
+		+ContactsMap()
 
 	// end sContacts
 
@@ -77,3 +76,8 @@ mixin cSoc()
 			span мы в соц сетях
 		+e.item-content
 			+soc()
+
+mixin ContactsMap()
+	+b.map-block
+		//-type="text/javascript" charset="utf-8"
+		<script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A76ed100998ead09f2848916a48450cd792f80ad44760a5ed901e77f31fba6deb&amp;width=1280&amp;height=600&amp;lang=ru_RU&amp;scroll=flase"></script>

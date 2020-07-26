@@ -126,6 +126,7 @@ function eventHandler() {
  
 		// скрывает моб меню
 
+		//select element after
 		// const topH = document.querySelector('header').scrollHeight;
 		// let stickyElement = document.querySelector('.top-nav')
 		// window.onscroll = () => {

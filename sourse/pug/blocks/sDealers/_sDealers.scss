@@ -119,10 +119,22 @@
 		padding: 37px 0 80px 0;
 	}
 	&__row{
+		@include media-breakpoint-up(md){
+			columns: 2;
+			column-gap: 30px;
+		}
+		@include media-breakpoint-up(lg){
+			columns: 3;
+		}
 
 	}
 	//
 	&__contact-item{
+		@include media-breakpoint-up(md) {
+			display: inline-block;
+			width: 100%;
+		}
+
 		background: $light;
 		margin-bottom: 30px;
 
@@ -305,10 +317,9 @@
 		object-fit: cover;
 	}*/
 
-	iframe{
+	& > ymaps{
 		width: 100% !important;
 		height: 100% !important;
-
 	}
 
 }

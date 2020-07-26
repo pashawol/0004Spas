@@ -1,0 +1,60 @@
+// start .sConstructions
+.sConstructions {
+	background-color: $light;
+
+	--sPB: #{0};
+
+
+	.section-title{
+		--sTPB: #{20px};
+		@include media-breakpoint-up(lg){
+			--sTPB: #{rem(39)};
+		}
+		//39px
+	}
+	.tabs{
+		&__caption{
+			@include media-breakpoint-down(sm){
+				align-items: stretch;
+				flex-direction: column;
+			}
+		}
+		&__btn{
+			background-color: transparent;
+
+
+			&:hover, &.active{
+				background-color: $primary;
+			}
+		}
+		&__caption{
+			padding-bottom: 55px;
+		}
+	}
+	//55px
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(xs) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(xs) {} 
+
+} // end.sConstructions

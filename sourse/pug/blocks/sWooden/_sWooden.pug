@@ -1,0 +1,27 @@
+mixin sWooden()
+	// start sWooden
+	+b.SECTION.sWooden.section#sWooden&attributes(attributes)
+		.container
+			+b.section-title
+				h2 деревянные окна
+			+e.row.row
+				+woodenItem(2)
+					h4 Окна из&nbsp;дуба
+					p Мы&nbsp;ставим перед собой задачу не&nbsp;просто нести тепло и&nbsp;уют в&nbsp;Ваши дома
+				+woodenItem(2)
+					h4 Окна из&nbsp;лиственницы
+					p Мы&nbsp;ставим перед собой задачу не&nbsp;просто нести тепло и&nbsp;уют в&nbsp;Ваши дома
+				+woodenItem(3)
+					h4 Окна из&nbsp;сосны
+					p Мы&nbsp;ставим перед собой задачу не&nbsp;просто нести тепло и&nbsp;уют в&nbsp;Ваши дома
+
+	// end sWooden
+
+mixin woodenItem(img, headlineTxt, parTxt)
+	.col-sm-6.col-lg-4
+		+e.A.learn-more-link(href='#')
+			img.lazy(src="#" data-src=`img/@2x/04-wooden-${img}.jpg` alt="")
+			+e.hidden-block
+				+e.lear-more-btn Подробнее
+		+e.txt-content
+			block

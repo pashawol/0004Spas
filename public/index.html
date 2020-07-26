@@ -66,7 +66,7 @@
 									<svg class="icon icon-tel ">
 										<use xlink:href="img/svg/sprite.svg#tel"></use>
 									</svg>телефон
-								</div><a class="h6 text-body" href="tel:8(800)100-00-00">8 (800) 100-00-00</a><br/><a class="smallest text-body ttu" href="#">Заказать звонок</a>
+								</div><a class="h6 text-body" href="tel:8(800)100-00-00">8 (800) 100-00-00</a><br/><a class="smallest text-body ttu link-modal" href="#modal-call">Заказать звонок</a>
 							</div>
 							<div class="contactBlock__item">
 								<div class="contactBlock__title">
@@ -590,7 +590,7 @@
 														</svg>
 													</div><span>телефон</span>
 												</div>
-												<div class="footer__item-content"><a class="footer__call-link" href="tel:+88001000000">8 (800) 100-00-00</a><a class="footer__order-call" href="#">Заказать звонок</a>
+												<div class="footer__item-content"><a class="footer__call-link" href="tel:+88001000000">8 (800) 100-00-00</a><a class="footer__order-call link-modal" href="#modal-call">Заказать звонок</a>
 												</div>
 											</div>
 										</div>
@@ -655,17 +655,15 @@
 		<div class="d-none">
 			<div class="form-wrap modal-win modal-form" id="modal-call">
 				<form>
-					<div class="text-center">
-						<div class="form-wrap__title h3 ttu">Обратный звонок
-						</div>
-						<p>Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут</p>
+					<div class="section-title">
+						<h2>Заказать звонок</h2>
 					</div>
-					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Ваше Имя" name="text" required="required"/> 
+					<div class="form-wrap__input-wrap form-group req"><input class="form-wrap__input form-control" type="text" placeholder="ФИО" name="name" required="required"/>
 					</div>
-					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="Ваш телефон" name="tel" required="required"/>
-					</div><input class="form-wrap__btn" type="submit" value="Рассчитать"/>
-					<div class="form-wrap__polite">Нажимая кнопку «Отправить» вы соглашаетесь с <a href="#">Политикой конфиденциальности</a>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group req"><input class="form-wrap__input form-control" type="tel" placeholder="Ваш телефон" name="tel" required="required"/>
 					</div>
+					<!-- +e.input-wrap--><input class="form-wrap__btn" type="submit" value="отправить"/>
 				</form>
 			</div>
 			<!-- #modal-call-->

@@ -32,7 +32,7 @@ mixin footer()
 							.col-lg-4.order-2.order-lg-0
 								+footerContItem('phone', 'телефон')
 									+e.A.call-link(href='tel:+88001000000') 8 (800) 100-00-00
-									+e.order-call(href='#') Заказать звонок
+									+e.order-call.link-modal(href='#modal-call') Заказать звонок
 							.col-lg-3.order-4.order-lg-0
 								+footerContItem(undefined, 'мы в соц сетях')
 									+soc()

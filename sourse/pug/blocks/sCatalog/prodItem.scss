@@ -14,12 +14,24 @@
 		margin-right: auto;
 		max-width: 290px;
 		margin-top: calc(1 * var(--imgH) / 2);
+
+		//hover
+		@include mt();
+		&:hover{
+			box-shadow: 0 0 30px -10px rgba($body-color, .33);
+
+			picture{
+				transform: scale(1.05);
+			}
+		}
+
 		@include media-breakpoint-up(xl) {
 
 			padding: 0 rem(25) rem(30);
 		}
 		padding: 0 rem(10) rem(30);
 		 picture{
+			 @include mt();
 				height: var(--imgH);
 				margin-top: calc(-1 * var(--imgH) / 2);
 				text-align: center;

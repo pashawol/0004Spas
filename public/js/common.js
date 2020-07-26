@@ -112,12 +112,14 @@ function eventHandler() {
 	JSCCommon.mobileMenu();
 	JSCCommon.inputMask(); // JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
-	// $(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/about.png);"></div>')
-	// /добавляет подложку для pixel perfect
+
+	$(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/04.png);"></div>'); // /добавляет подложку для pixel perfect
+
 	// /закрыть/открыть мобильное меню
 
 	function heightses() {
 		// скрывает моб меню
+		//select element after
 		// const topH = document.querySelector('header').scrollHeight;
 		// let stickyElement = document.querySelector('.top-nav')
 		// window.onscroll = () => {

@@ -24,7 +24,8 @@ mixin ie11()
 
 mixin search()
 	+b.searchBlock
-		form(action="")
+		form()
+			//-action=""
 			input(type="text" placeholder="Поиск")
 			button
 				+icon('search')

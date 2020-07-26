@@ -1,0 +1,33 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug 
+include ../blocks/sCatalog/_sCatalog.pug 
+include ../blocks/sOrder/_sOrder.pug 
+include ../blocks/sAbout/_sAbout.pug 
+include ../blocks/sCases/_sCases.pug 
+include ../blocks/sLogos/_sLogos.pug 
+include ../blocks/sInstallments/_sInstallments.pug
+
+include ../blocks/sArticalsPage/_sArticalsPage.pug
+include ../blocks/sDealers/_sDealers.pug
+include ../blocks/sMoreAbout/_sMoreAbout.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'О компании'
+	title= title
+block pagecontent 
+	aside
+		+mob-mnu()
+		+top-nav()
+	main
+		+sArticalsPage-about(title)
+			+breadcrumb('Главная', title)
+		+sAbout-lg
+		+sMoreAbout
+		+sForm()
+		+footer()
+	

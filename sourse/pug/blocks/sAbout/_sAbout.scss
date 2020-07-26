@@ -86,4 +86,15 @@
 	@include media-breakpoint-down(sm) {}
 	@include media-breakpoint-down(xs) {} 
 
+	&--inner{
+
+		picture {
+			z-index: -1;
+			left: 117%;
+			top: rem(-350);
+		}
+		.sAbout__content--lg {
+			max-width: rem(1000);
+		}
+	}
 } // end.sAbout

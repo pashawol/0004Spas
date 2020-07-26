@@ -15,8 +15,7 @@ mixin sDealers()
 					p Мы&nbsp;ставим перед собой задачу не&nbsp;просто нести тепло и&nbsp;уют в&nbsp;Ваши дома. Прежде всего мы&nbsp;хотим помочь Вам сделать осознанный, а&nbsp;значит правильный выбор при заказе&nbsp;остекления
 				.section-title
 					h2 наши Дилеры
-		+b.map-block
-			img.lazy(src='#' data-src="img/@2x/map-img.jpg" alt="")
+		+mapBlock()
 		+e.contacts
 			.container
 				+e.row.row
@@ -93,3 +92,8 @@ mixin dCite()
 			span сайт компании
 		+e.item-content
 			+e.page-link(href="www.site.ru") www.site.ru
+
+mixin mapBlock()
+	+b.map-block
+		iframe(src='https://yandex.ru/map-widget/v1/?um=constructor%3A76ed100998ead09f2848916a48450cd792f80ad44760a5ed901e77f31fba6deb&source=constructor', width='1280', height='600', frameborder='0')
+		//-img.lazy(src='#' data-src="img/@2x/map-img.jpg" alt="")

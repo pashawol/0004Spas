@@ -162,13 +162,13 @@ body {
 	aside{
 		position: relative;
 		flex: 0 0 var(--asideW);
-		width: var(--asideW);
+		max-width: var(--asideW);
 		background-color: $white;
 	}
 	main{
 		flex-grow: 1;
 		flex: 0 0 calc(100% - var(--asideW));
-		width: calc(100% - var(--asideW));
+		max-width: calc(100% - var(--asideW));
 		
 	}
 }

@@ -55,7 +55,13 @@
 			border-radius: $border-radius;
 		}
 	}
+	//polite
+	.form-wrap__policy{
+		margin-bottom: rem(30);
+		font-size: rem(14);
+	}
 
+	//btn
 	.form-wrap__btn{
 		@extend .btn;
 		@extend .btn-block;

@@ -6,6 +6,10 @@ mixin modal()
 				h2 Заказать звонок
 			+inputReq("ФИО", 'text', undefined, 'name')(required)
 			+inputReq("Ваш телефон","tel", undefined, 'tel')(required)
+			+e.policy
+				| Нажимая кнопку «Отправить» вы соглашаетесь с
+				|
+				a(href="#") Политикой конфиденциальности
 			+e.INPUT.btn(type="submit" value="отправить")
 		// #modal-call
 	// modal

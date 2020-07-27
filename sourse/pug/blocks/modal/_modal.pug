@@ -1,4 +1,3 @@
-
 mixin modal()
 	.d-none
 		+form-wrap()(id="modal-call" class="modal-win modal-form")
@@ -13,3 +12,16 @@ mixin modal()
 			+e.INPUT.btn(type="submit" value="отправить")
 		// #modal-call
 	// modal
+
+mixin modal()
+	.d-none
+		+form-wrap()(id="modal-call2" class="modal-win modal-form")
+			+b.section-title
+				h2 Заказать звонок
+			+inputReq("ФИО", 'text', undefined, 'name')(required)
+			+inputReq("Ваш телефон","tel", undefined, 'tel')(required)
+			+e.policy
+				| Нажимая кнопку «Отправить» вы соглашаетесь с
+				|
+				a(href="#") Политикой конфиденциальности
+			+e.INPUT.btn(type="submit" value="отправить")

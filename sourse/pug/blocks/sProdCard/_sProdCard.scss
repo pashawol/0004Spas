@@ -240,6 +240,12 @@
 	}
 
 	//big-wind-img
+	&__center-col{
+		order: 1;
+		@include media-breakpoint-up(xl){
+			order: 0;
+		}
+	}
 	&__big-wind-img{
 		display: flex;
 		width: 100%;

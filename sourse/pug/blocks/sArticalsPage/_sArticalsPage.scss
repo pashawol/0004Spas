@@ -237,10 +237,7 @@
 
 		margin-left: auto;
 		margin-right: auto;
-		width: 100%;
-		@include media-breakpoint-up(sm){
-			max-width: rem(180);
-		}
+		max-width: rem(180);
 	}
 	&__{}
 	@include media-breakpoint-up(xl) {}

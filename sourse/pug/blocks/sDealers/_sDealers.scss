@@ -267,7 +267,14 @@
 		font-weight: 300;
 		line-height: (18/24);
 	}
-	&__{}
+
+	//more-btn
+	&__more-btn{
+		@extend .btn;
+		@extend .btn-outline-primary;
+
+		width: rem(180px);
+	}
 	&__{}
 	&__{}
 	&__{}

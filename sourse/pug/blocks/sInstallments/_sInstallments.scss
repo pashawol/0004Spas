@@ -45,7 +45,14 @@
 	&__wind-cont{
 		height: 100%;
 		width: 44.75vw;
-		max-width: 859px;
+
+
+		@include media-breakpoint-up(xl){
+			max-width: calc(50vw - var(--asideW));
+		}
+		@include media-breakpoint-up(base){
+			max-width: 859px;
+		}
 
 		img{
 			width: 100%;

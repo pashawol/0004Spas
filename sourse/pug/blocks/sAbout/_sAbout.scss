@@ -100,7 +100,15 @@
 		picture {
 			z-index: -1;
 			left: 117%;
-			top: rem(-350);
+			top: rem(-370);
+			// width: calc(88% + 30vw);
+			@include media-breakpoint-down(xl) {
+				top: rem(-300);
+				left: 108%;
+			}
+			img {
+				// max-width: 100%;
+			}
 		}
 		.sAbout__content--lg {
 			max-width: rem(1000);

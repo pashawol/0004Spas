@@ -117,7 +117,7 @@ function eventHandler() {
 	// JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
 
-	// $(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/04.png);"></div>')
+	// $(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/about.png);"></div>')
 	// /добавляет подложку для pixel perfect
 
 
@@ -267,7 +267,7 @@ function eventHandler() {
 
 			992: {
 				slidesPerView: 4,
-				spaceBetween: 70
+				spaceBetween: 60
 			},
 		},
 		loop: true,

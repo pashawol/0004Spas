@@ -20,6 +20,9 @@ mixin modal()
 				h2 Заказать звонок
 			+inputReq("ФИО", 'text', undefined, 'name')(required)
 			+inputReq("Ваш телефон","tel", undefined, 'tel')(required)
+			+inputReq("Email","email", undefined, 'email')(required)
+			+e.LABEL.ta-label.req
+				textarea.form-wrap__input.form-control.ta(placeholder="Cообщение")
 			+e.policy
 				| Нажимая кнопку «Отправить» вы соглашаетесь с
 				|

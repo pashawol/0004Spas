@@ -1,0 +1,25 @@
+mixin sColorDecision()
+	// start sColorDecision
+	+b.SECTION.sColorDecision.section#sColorDecision&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Цветовые решения окон
+			+e.row.row
+				+colorDesItem(1, 'Клен')
+				+colorDesItem(2, 'Дуб')
+				+colorDesItem(3, 'Светлый Дуб')
+				+colorDesItem(4, 'Сосна')
+				+colorDesItem(5, 'Золотой тик')
+				+colorDesItem(6, 'каштан')
+				+colorDesItem(7, 'Грецкий орех')
+				+colorDesItem(8, 'орех')
+				+colorDesItem(9, 'Махагон')
+				+colorDesItem(10, 'палисандр')
+	// end sColorDecision
+
+mixin colorDesItem(img, nameTxt)
+	+e.col-part-5.col-md-3.col-6
+		+e.A.item-link(href='#')
+			+e.item-img
+				img.lazy(src='#' data-src=`img/@2x/04-color-des-${img}.jpg` alt="")
+			+e.name=nameTxt

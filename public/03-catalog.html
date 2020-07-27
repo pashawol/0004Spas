@@ -35,8 +35,9 @@
 						<div class="top-nav__menu-wrap">
 							<div class="top-nav__menu-block">
 								<ul class="top-nav__nav" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-									<li class="top-nav__item" itemprop="item"><a class="top-nav__link active" href="#" itemprop="url">Каталог</a>
+									<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#" itemprop="url">Каталог</a>
 									</li>
+									<!-- на вешать .active-->
 									<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#" itemprop="url">О компании</a>
 									</li>
 									<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#" itemprop="url">Дилерам</a>
@@ -51,7 +52,7 @@
 							</div>
 						</div>
 						<div class="searchBlock">
-							<form action="">
+							<form>
 								<input type="text" placeholder="Поиск"/>
 								<button>
 									<svg class="icon icon-search ">
@@ -66,7 +67,7 @@
 									<svg class="icon icon-tel ">
 										<use xlink:href="img/svg/sprite.svg#tel"></use>
 									</svg>телефон
-								</div><a class="h6 text-body" href="tel:8(800)100-00-00">8 (800) 100-00-00</a><br/><a class="smallest text-body ttu" href="#">Заказать звонок</a>
+								</div><a class="h6 text-body" href="tel:8(800)100-00-00">8 (800) 100-00-00</a><br/><a class="smallest text-body ttu link-modal" href="#modal-call">Заказать звонок</a>
 							</div>
 							<div class="contactBlock__item">
 								<div class="contactBlock__title">
@@ -126,7 +127,7 @@
 				</div>
 				<!-- end sContent-->
 				<!-- start sCatalog-->
-				<section class="sCatalog section" id="sCatalog">
+				<div class="sCatalog section" id="sCatalog">
 					<div class="container">
 						<div class="row">
 							<div class="sCatalog__col col-lg-3 col-sm-6"><a class="prodItem" href="#">
@@ -205,12 +206,12 @@
 								<div class="prodItem__price">от 11 150 ₽
 								</div><span class="prodItem__btn">Подробнее</span></a>
 							</div>
-						</div><a class="sCatalog__btn" href="#">Подробнее</a>
+						</div><a class="sCatalog__btn" href="#">Показать еще</a>
 						<p> <strong>Производятся из качественного 3-х слойного клееного бруса</strong> (категории "В"), сырьем служит ангарская сосна, лиственница или дуб. </p>
 						<p>Древесина проходит тщательный отбор, чтобы исключить наличие сучков, микротрещин и дефектов на поверхности изделия.  Брус производится методом склеивания трех ламелей, это придает ему высокую прочность, поэтому готовое окно не будет менять своей геометрии из-за высокой влажности или, наоборот, аномальной сухости.</p>
 						<p>Древесина проходит тщательный отбор, чтобы исключить наличие сучков, микротрещин и дефектов на поверхности изделия.  Брус производится методом склеивания трех ламелей, это придает ему высокую прочность, поэтому готовое окно не будет менять своей геометрии из-за высокой влажности или, наоборот, аномальной сухости.</p>
 					</div>
-				</section>
+				</div>
 				<!-- end sCatalog-->
 				<!-- start sForm-->
 				<section class="sForm section" id="sForm">
@@ -232,17 +233,14 @@
 												<label><span class="form-wrap__title">Имя</span><input class="form-wrap__input form-control" type="text" placeholder="" name="name"/>
 												</label>
 											</div>
-											<!-- +e.input-wrap-->
 											<div class="form-wrap__input-wrap form-group">
 												<label><span class="form-wrap__title">телефон</span><input class="form-wrap__input form-control" type="tel" placeholder="" name="tel"/>
 												</label>
 											</div>
-											<!-- +e.input-wrap-->
 											<div class="form-wrap__input-wrap form-group">
-												<label><span class="form-wrap__title">e-mail</span><input class="form-wrap__input form-control" type="mail" placeholder="" name="mail"/>
+												<label><span class="form-wrap__title">e-mail</span><input class="form-wrap__input form-control" type="email" placeholder="" name="email"/>
 												</label>
 											</div>
-											<!-- +e.input-wrap-->
 										</div>
 										<!--+input('', 'textarea', 'сообщение', 'message')-->
 										<label class="form-wrap__ta-label"><span class="form-wrap__title">сообщение</span>
@@ -271,7 +269,7 @@
 									Компания СПАС&nbsp;&mdash; деревянные евроокна премиум класса
 									<br/>Все права защищены &copy;&nbsp;2020г.
 								</div>
-								<div class="footer__company-creator"><span>Создание сайта компания "Алроникс"</span><img class="lazy" src="" data-src="img/@2x/creator-logo.png" alt=""/>
+								<div class="footer__company-creator"><span>Создание сайта компания "Алроникс"</span><img class="lazy" src="#" data-src="img/@2x/creator-logo.png" alt=""/>
 								</div>
 							</div>
 							<div class="col-lg-8">
@@ -311,7 +309,7 @@
 														</svg>
 													</div><span>телефон</span>
 												</div>
-												<div class="footer__item-content"><a class="footer__call-link" href="tel:+88001000000">8 (800) 100-00-00</a><a class="footer__order-call" href="#">Заказать звонок</a>
+												<div class="footer__item-content"><a class="footer__call-link" href="tel:+88001000000">8 (800) 100-00-00</a><a class="footer__order-call link-modal" href="#modal-call">Заказать звонок</a>
 												</div>
 											</div>
 										</div>
@@ -376,19 +374,15 @@
 		<div class="d-none">
 			<div class="form-wrap modal-win modal-form" id="modal-call">
 				<form>
-					<div class="text-center">
-						<div class="form-wrap__title h3 ttu">Обратный звонок
-						</div>
-						<p>Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут</p>
+					<div class="section-title">
+						<h2>Заказать звонок</h2>
 					</div>
-					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Ваше Имя" name="text" required="required"/> 
+					<div class="form-wrap__input-wrap form-group req"><input class="form-wrap__input form-control" type="text" placeholder="ФИО" name="name" required="required"/>
 					</div>
 					<!-- +e.input-wrap-->
-					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="Ваш телефон" name="tel" required="required"/>
+					<div class="form-wrap__input-wrap form-group req"><input class="form-wrap__input form-control" type="tel" placeholder="Ваш телефон" name="tel" required="required"/>
 					</div>
-					<!-- +e.input-wrap--><input class="form-wrap__btn" type="submit" value="Рассчитать"/>
-					<div class="form-wrap__polite">Нажимая кнопку «Отправить» вы соглашаетесь с <a href="#">Политикой конфиденциальности</a>
-					</div>
+					<!-- +e.input-wrap--><input class="form-wrap__btn" type="submit" value="отправить"/>
 				</form>
 			</div>
 			<!-- #modal-call-->

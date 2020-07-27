@@ -1,10 +1,21 @@
 .modal-win {
 	// display: block;
-	width: 100%;
 	position: relative;
 
+	width: calc(100% - 20px);
+	margin: 0 auto;
+	@include media-breakpoint-up(sm){
+		width: 412px;
+	}
+
+	--sTPB: #{rem(41px)};
+	padding-bottom: 70px;
+
 	.modal-content {
-		// max-width: 485px;
+		max-width: calc(100% - 20px);
+		@include media-breakpoint-up(sm){
+			max-width: 287px;
+		}
 		// padding-right: 40px 15px;
 	}
 
@@ -13,6 +24,46 @@
 		font-size: 40px;
 		font-weight: 100;
 	}
+
+	.form-wrap__input-wrap{
+		margin-bottom: rem(30);
+	}
+	.form-wrap__input{
+		box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.1);
+		border: 1px solid rgba(141, 141, 141, 0.16);
+		background-color: $white;
+	}
+
+	.req{
+		position: relative;
+		&:after{
+			content: '*';
+			position: absolute;
+			right: 17px;
+			bottom: 14px;
+			width: 8px;
+			height: 8px;
+
+			line-height: 1;
+			color: $dot-red;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		input{
+			padding-right: 30px;
+			border-radius: $border-radius;
+		}
+	}
+
+	.form-wrap__btn{
+		@extend .btn;
+		@extend .btn-block;
+		@extend .btn-outline-primary;
+
+		width: rem(163);
+	}
+
 }
 
 a {

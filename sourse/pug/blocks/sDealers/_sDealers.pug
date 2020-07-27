@@ -1,0 +1,102 @@
+mixin sDealers()
+	// start sDealers
+	+b.SECTION.sDealers.section#sDealers&attributes(attributes)
+		+e.header
+			+e.header-bg
+				img.lazy(src='#' data-src="img/@2x/head-bg-catalog.jpg" alt="")
+			.container
+				+b.section-title
+					h2 Дилерам
+				block
+		+e.white-strip
+			.container
+				+e.white-st-headline Компания работает на&nbsp;рынке пластиковых окон с&nbsp;2003&nbsp;года. У&nbsp;нашей компании есть собственное производство пластиковых окон&nbsp;&mdash; и&nbsp;это является нашим неоспоримым преимуществом перед другими московскими оконными компаниями.
+				+e.white-st-txt
+					p Мы&nbsp;ставим перед собой задачу не&nbsp;просто нести тепло и&nbsp;уют в&nbsp;Ваши дома. Прежде всего мы&nbsp;хотим помочь Вам сделать осознанный, а&nbsp;значит правильный выбор при заказе&nbsp;остекления
+				.section-title
+					h2 наши Дилеры
+		+mapBlock()
+		+e.contacts
+			.container
+				+e.row
+					//-1
+					+dealerContItem()
+						+dLocation()
+						+dPhone()
+						+dSoc()
+						+dCite()
+					//-2
+					+dealerContItem()
+						+dLocation()
+						+dPhone()
+						+dSoc()
+					//-3
+					+dealerContItem()
+						+dLocation()
+						+dPhone()
+						+dSoc()
+					//-4
+					+dealerContItem()
+						+dLocation()
+						+dPhone()
+						+dSoc()
+						+dCite()
+					//-5
+					+dealerContItem()
+						+dLocation()
+						+dPhone()
+						+dSoc()
+					//-6
+					+dealerContItem()
+						+dLocation()
+						+dPhone()
+						+dSoc()
+	// end sDealers
+
+mixin dealerContItem()
+	+e.contact-item
+		+e.contact-item-headline OKNASTREET
+		+e.subitems-cont
+			block
+
+mixin dLocation()
+	+e.sub-item
+		+e.item-header
+			+e.icon-cont
+				+icon('location')
+			span ардес
+		+e.item-content
+			+e.address 424007, г. Йошкар-Ола, ул. Машиностроителей, д.&nbsp;112&nbsp;А
+
+mixin dPhone()
+	+e.sub-item
+		+e.item-header
+			+e.icon-cont
+				+icon('phone')
+			span телефон
+		+e.item-content
+			+e.A.call-link(href='tel:+88001000000') 8 (800) 100-00-00
+			+e.order-call.link-modal(href='#modal-call') Заказать звонок
+
+mixin dSoc()
+	+e.sub-item
+		+e.item-header
+			+e.icon-cont
+				+icon('glob')
+			span мы в соц сетях
+		+e.item-content
+			+soc()
+
+mixin dCite()
+	+e.sub-item
+		+e.item-header
+			+e.icon-cont
+				+icon('glob')
+			span сайт компании
+		+e.item-content
+			+e.page-link(href="www.site.ru") www.site.ru
+
+mixin mapBlock()
+	+b.map-block
+		//-type="text/javascript" charset="utf-8" , before async
+		<script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A76ed100998ead09f2848916a48450cd792f80ad44760a5ed901e77f31fba6deb&amp;width=1280&amp;height=600&amp;lang=ru_RU&amp;scroll=false"></script>

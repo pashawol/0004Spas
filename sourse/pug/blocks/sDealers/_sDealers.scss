@@ -1,0 +1,325 @@
+// start .sDealers
+.sDealers {
+	--sPT: #{0};
+	--sPB: #{0};
+
+	&__header{
+		//
+		.section-title{
+			--sTPB: #{12px};
+			h2{
+				font-size: rem(30px);
+				letter-spacing: 3px;
+				@include media-breakpoint-up(sm){
+					font-size: rem(60px);
+					letter-spacing: 6px;
+				}
+
+			}
+			h2:after{
+				margin-top: rem(43px);
+				background-color: $white;
+			}
+		}
+
+		position: relative;
+		color: $white;
+
+		padding: rem(60px) 0 rem(30px) 0;
+		@include media-breakpoint-up(lg){
+			padding: rem(110px) 0 rem(50px) 0;
+		}
+		@include media-breakpoint-up(lg){
+			padding: rem(144px) 0 rem(62px) 0;
+		}
+
+		.container{
+			@include media-breakpoint-up(xxl){
+				padding-left: 5px;
+			}
+		}
+	}
+	&__header-bg{
+		position: absolute;
+		z-index: -1;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: top center;
+		}
+		&:after{
+			content: '';
+			position: absolute;
+			z-index: 0;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0,0,0,.5);
+		}
+	}
+
+
+	//white-strip
+	&__white-strip{
+
+		//title
+		.section-title{
+			padding-bottom: rem(25);
+			@include media-breakpoint-up(xl){
+				padding-bottom: rem(28px);
+			}
+		}
+
+
+		padding: rem(30) 0 0 0;
+		@include media-breakpoint-up(sm){
+			padding: rem(50) 0 0 0;
+		}
+		@include media-breakpoint-up(lg){
+			padding: rem(60px) 0 0 0;
+		}
+		.container{
+			@include media-breakpoint-up(xxl){
+				padding-left: 5px;
+				padding-right: 0;
+			}
+		}
+	}
+	&__white-st-headline{
+		font-weight: 800;
+		text-transform: uppercase;
+		padding-bottom: rem(16px);
+		font-size: rem(18px);
+		line-height: 1.4;
+	}
+	&__white-st-txt{
+		padding-bottom: rem(30);
+		@include media-breakpoint-up(xl){
+			padding-bottom: rem(50px);
+		}
+		p{
+			color: $secondary;
+			font-weight: 300;
+			font-size: rem(18px);
+		}
+		p:last-child{
+			margin-bottom: 0;
+		}
+	}
+
+	//
+	//contacts
+	&__contacts{
+		padding: 37px 0 80px 0;
+	}
+	&__row{
+		@include media-breakpoint-up(md){
+			columns: 2;
+			column-gap: 30px;
+		}
+		@include media-breakpoint-up(lg){
+			columns: 3;
+		}
+
+	}
+	//
+	&__contact-item{
+		@include media-breakpoint-up(md) {
+			display: inline-block;
+			width: 100%;
+		}
+
+		background: $light;
+		margin-bottom: 30px;
+
+		padding: rem(30) rem(20);
+		@include media-breakpoint-up(xl){
+			padding: rem(30) rem(20);
+		}
+		@include media-breakpoint-up(xxl){
+			padding: 45px 33px 23px 33px;
+		}
+	}
+
+	&__contact-item-headline{
+		font-weight: 800;
+		line-height: (24/18);
+		text-transform: uppercase;
+
+		font-size: 18px;
+		padding-bottom: 30px;
+	}
+	&__subitems-cont{
+		padding-left: 5px;
+	}
+	//item
+
+	&__sub-item{
+		width: 220px;
+	}
+	&__item-header{
+		display: flex;
+		align-items: center;
+		padding-bottom: 3px;
+
+		span{
+			color: $primary2;
+			line-height: 2;
+			font-size: 12px;
+			text-transform: uppercase;
+		}
+	}
+	&__icon-cont{
+		height: 25px;
+		margin-right: 12px;
+
+		display: flex;
+		align-items: center;
+
+		.icon{
+			color: $primary3;
+			font-size: rem(17px);
+
+			&-location{
+				font-size: rem(25px);
+			}
+			&-phone{
+
+			}
+			&-clock{
+
+			}
+			&-mail{
+
+			}
+		}
+
+
+	}
+
+	&__item-content{
+		padding-bottom: rem(20);
+		@include media-breakpoint-up(lg){
+			padding-bottom: 24px;
+		}
+	}
+	//1
+	&__address{
+
+	}
+	//2
+	&__call-link{
+		display: block;
+		color: $body-color;
+		@include mt();
+		&:hover{
+			color: $primary;
+		}
+
+		font-size: $h6-font-size;
+		font-weight: 300;
+		line-height: (24/18);
+	}
+	&__order-call{
+		color: $body-color;
+		@include mt();
+		&:hover{
+			color: $primary;
+		}
+
+		font-size: $smallest;
+		line-height: 2;
+		text-transform: uppercase;
+	}
+	//3
+	&__page-link{
+		color: $body-color;
+		@include mt();
+		&:hover{
+			color: $primary;
+		}
+
+		font-size: $smallest;
+		line-height: 2;
+		text-transform: uppercase;
+	}
+	//4
+	&__working-shedule{
+		font-size: $h6-font-size;
+		font-weight: 300;
+		line-height: (18/24);
+	}
+	//5
+	&__mail-link{
+		color: $body-color;
+		@include mt();
+		&:hover{
+			color: $primary;
+		}
+
+		font-size: $h6-font-size;
+		font-weight: 300;
+		line-height: (18/24);
+	}
+	&__{}
+	&__{}
+	&__{}
+	&__{}
+	&__{}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(xs) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(xs) {} 
+
+} // end.sDealers
+
+//map
+
+.map-block{
+
+	height: rem(300);
+	@include media-breakpoint-up(lg){
+		height: rem(450px);
+	}
+	@include media-breakpoint-up(xl){
+		height: rem(600px);
+	}
+
+	/*img{
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}*/
+
+	& > ymaps{
+		width: 100% !important;
+		height: 100% !important;
+	}
+
+}

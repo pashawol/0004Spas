@@ -14,7 +14,7 @@ mixin footer()
 						| Все права защищены &copy;&nbsp;2020г.
 					+e.company-creator
 						span Создание сайта компания "Алроникс"
-						img.lazy(src="" data-src="img/@2x/creator-logo.png" alt="")
+						img.lazy(src="#" data-src="img/@2x/creator-logo.png" alt="")
 				.col-lg-8
 					+e.big-col-content
 						+e.menu
@@ -32,7 +32,7 @@ mixin footer()
 							.col-lg-4.order-2.order-lg-0
 								+footerContItem('phone', 'телефон')
 									+e.A.call-link(href='tel:+88001000000') 8 (800) 100-00-00
-									+e.order-call(href='#') Заказать звонок
+									+e.order-call.link-modal(href='#modal-call') Заказать звонок
 							.col-lg-3.order-4.order-lg-0
 								+footerContItem(undefined, 'мы в соц сетях')
 									+soc()
@@ -42,7 +42,6 @@ mixin footer()
 							.col-lg-4.order-3.order-lg-0
 								+footerContItem('mail', 'e-mail')
 									+e.A.mail-link(href="mailto:info@gmail.com") info@gmail.com
-
 
 mixin footerContItem(iconName, itemName)
 	+e.cont-item

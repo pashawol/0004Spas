@@ -1,16 +1,11 @@
 
-mixin modal() 
- 
+mixin modal()
 	.d-none
-		+form-wrap()(id="modal-call" class="  modal-win modal-form" )
-			.text-center
-				+e.title.h3.ttu Обратный звонок
-				p Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут
-			+input("Ваше Имя")(required) 
-			+input("Ваш телефон","tel")(required)
-			//- +input("email","Ваше email")(required)
-			//- +text( "Комментарий")
-			+e.INPUT.btn(type="submit" value="Рассчитать") 
-			+polite()
+		+form-wrap()(id="modal-call" class="modal-win modal-form")
+			+b.section-title
+				h2 Заказать звонок
+			+inputReq("ФИО", 'text', undefined, 'name')(required)
+			+inputReq("Ваш телефон","tel", undefined, 'tel')(required)
+			+e.INPUT.btn(type="submit" value="отправить")
 		// #modal-call
 	// modal

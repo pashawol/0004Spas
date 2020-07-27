@@ -1,0 +1,83 @@
+mixin sContacts()
+	// start sContacts
+	+b.SECTION.sContacts.section#sContacts&attributes(attributes)
+		+e.header
+			+e.header-bg
+				img.lazy(src='#' data-src="img/@2x/head-bg-catalog.jpg" alt="")
+			.container
+				+b.section-title
+					h2 Контакты
+				block
+		+e.container.container
+			+e.row.row
+				+e.contact-col.col-sm-6.col-xl-3
+					+e.col-content
+						+cLocation()
+				+e.contact-col.col-sm-6.col-xl-3
+					+e.col-content
+						+cPhone()
+				+e.contact-col.col-sm-6.col-xl-3
+					+e.col-content
+						+cShedule()
+						+cEmail()
+				+e.contact-col.col-sm-6.col-xl-3
+					+e.col-content
+						+cSoc()
+		+grayForm()
+		+ContactsMap()
+
+	// end sContacts
+
+mixin cLocation()
+	+e.item
+		+e.item-header
+			+e.icon-cont
+				+icon('location')
+			span ардес
+		+e.item-content
+			+e.address
+				p 424007, г. Йошкар-Ола, ул. Машиностроителей, д.&nbsp;112&nbsp;А
+				p улица Луначарского, 52, Сернурский тракт, 23, Йошкар-Ола, Респ. Марий Эл, Россия, 424016
+
+mixin cPhone()
+	+e.item
+		+e.item-header
+			+e.icon-cont
+				+icon('phone')
+			span телефон
+		+e.item-content
+			+e.A.call-link(href='tel:+88001000000') 8 (800) 100-00-00
+			+e.A.call-link(href='#') 8 (800) 100-00-00 (факс)
+
+
+mixin cShedule()
+	+e.item
+		+e.item-header
+			+e.icon-cont
+				+icon('clock')
+			span время работы
+		+e.item-content
+			+e.shedule пн-пт. 9.00-19.00
+
+mixin cEmail()
+	+e.item
+		+e.item-header
+			+e.icon-cont
+				+icon('mail')
+			span e-mail
+		+e.item-content
+			+e.shedule info@gmail.com
+
+mixin cSoc()
+	+e.item
+		+e.item-header
+			+e.icon-cont
+				+icon('glob')
+			span мы в соц сетях
+		+e.item-content
+			+soc()
+
+mixin ContactsMap()
+	+b.map-block
+		//-type="text/javascript" charset="utf-8"
+		<script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A76ed100998ead09f2848916a48450cd792f80ad44760a5ed901e77f31fba6deb&amp;width=1280&amp;height=600&amp;lang=ru_RU&amp;scroll=flase"></script>

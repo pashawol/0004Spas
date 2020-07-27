@@ -1,0 +1,39 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug 
+include ../blocks/sCatalog/_sCatalog.pug 
+include ../blocks/sOrder/_sOrder.pug 
+include ../blocks/sAbout/_sAbout.pug 
+include ../blocks/sCases/_sCases.pug 
+include ../blocks/sLogos/_sLogos.pug 
+include ../blocks/sInstallments/_sInstallments.pug
+
+include ../blocks/sArticalsPage/_sArticalsPage.pug
+include ../blocks/sDealers/_sDealers.pug
+include ../blocks/sContacts/_sContacts.pug
+
+include ../blocks/sProdCard/_sProdCard.pug
+include ../blocks/sConstructions/_sConstructions.pug
+include ../blocks/sColorDecision/_sColorDecision.pug
+include ../blocks/sWooden/_sWooden.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= '04'
+	title= title
+block pagecontent 
+	aside
+		+mob-mnu()
+		+top-nav()
+	main
+		+sProdCard()
+			+breadcrumb('Главная', 'деревянные окна')
+		+sConstructions()
+		+sColorDecision()
+		+sOrder()
+		+sWooden()
+		+sForm()
+		+footer()

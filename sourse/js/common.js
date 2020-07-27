@@ -116,7 +116,8 @@ function eventHandler() {
 
 	// JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
-	$(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/03.png);"></div>')
+
+	// $(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/04.png);"></div>')
 	// /добавляет подложку для pixel perfect
 
 
@@ -126,6 +127,7 @@ function eventHandler() {
  
 		// скрывает моб меню
 
+		//select element after
 		// const topH = document.querySelector('header').scrollHeight;
 		// let stickyElement = document.querySelector('.top-nav')
 		// window.onscroll = () => {
@@ -200,6 +202,7 @@ function eventHandler() {
 		// 	swiper: galleryThumbs,
 		// },
 	});
+
 	const swipersCase = new Swiper('.sCases__slider--js', {
 		// slidesPerView: 5,
 		...defaultSl,
@@ -207,6 +210,9 @@ function eventHandler() {
 		slidesPerView: 1,
 		breakpoints: { 
 		
+			768: {
+				slidesPerView: 2
+			},
 			992: {
 				slidesPerView: 6
 			},
@@ -243,6 +249,34 @@ function eventHandler() {
 	});
  
 
+	const swiperCertificates = new Swiper('.slider-certificates', {
+		// slidesPerView: 5,
+		...defaultSl,
+		watchOverflow: true,
+		slidesPerView: 2,
+		spaceBetween: 5,
+		breakpoints: { 
+			576: {
+				spaceBetween: 10
+			},
+			
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 30
+			},
+
+			992: {
+				slidesPerView: 4,
+				spaceBetween: 70
+			},
+		},
+		loop: true,
+		navigation: {
+			nextEl: '.sMoreAbout .swiper-button-next',
+			prevEl: '.sMoreAbout .swiper-button-prev',
+		},
+	});
+
 	// function tabSlider(){
 	function tabscostume(tab) {
 		var params = {
@@ -251,7 +285,9 @@ function eventHandler() {
 			watchOverflow: true,
 			slidesPerView: 1,
 			breakpoints: {
-
+				768: {
+					slidesPerView: 2
+				},
 				992: {
 					slidesPerView: 6
 				},

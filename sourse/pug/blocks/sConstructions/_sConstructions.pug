@@ -1,0 +1,30 @@
+mixin sConstructions()
+	// start sConstructions
+	+b.SECTION.sConstructions.section#sConstructions&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Цены на типовые конструкции
+			+b.tabs
+				+e.caption
+					+e.btn.active окна из сосны
+					+e.btn окна из лиственницы
+					+e.btn окна из дуба
+				+e.wrap
+					+e.content.active
+						+catalogInTabs()
+					+e.content
+						+catalogInTabs()
+					+e.content
+						+catalogInTabs()
+	// end sConstructions
+
+mixin catalogInTabs()
+	.row
+		+e.col.col-lg-3.col-sm-6
+			+itemProd('1','Одностворчатое окно')
+		+e.col.col-lg-3.col-sm-6
+			+itemProd('2','Двустворчатое  окно')
+		+e.col.col-lg-3.col-sm-6
+			+itemProd('3','Трехстворчатое окно')
+		+e.col.col-lg-3.col-sm-6
+			+itemProd('4','Балконный блок ')

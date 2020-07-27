@@ -147,12 +147,12 @@ body {
 	overflow: hidden;
 	min-height: 100vh;
 	min-height: calc(var(--vh, 1vh) * 100);
-	@include media-breakpoint-up(xxl) {
+	@include media-breakpoint-up(xl) {
 
 		display: flex;
 	}
 }
-@include media-breakpoint-up(xxl) {
+@include media-breakpoint-up(xl) {
 
 	:root{
 		--asideW: #{rem(220)};

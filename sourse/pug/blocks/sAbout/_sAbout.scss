@@ -19,7 +19,10 @@
 			}
 		}
 		&__content{
-			max-width: rem(530);
+				@include media-breakpoint-up(llg) {
+
+					max-width: rem(530);
+				}
 			position: relative;
 		}
 		&__item{
@@ -44,6 +47,12 @@
 			position: absolute;
 			left: 41%;
 			top: -67px;
+			@include media-breakpoint-down(xl) {
+				left: 45%;
+			img{
+					max-width: rem(900);
+				}
+				}
 			img{
 				max-width: none;
 			}

@@ -20,7 +20,7 @@ mixin caseSlider(i= 7)
 							source( srcset=`img/@2x/webp/case-${x}.webp` type="image/webp")
 							img.object-fit-js.img-bg( src=`img/@2x/case-${x}.jpg`, alt="")
 						+e.title Остекление частного дома
-		.d-md-none
+		.d-lg-none
 			+arrow
 mixin sCases()
 	+sCasesBody()(class="pb-0")
@@ -40,7 +40,7 @@ mixin sCases06()
 					.tabs__content&attributes(attributes)
 						+caseSlider(13)(class="tab-slider-js")
 						
-						+e.btn(href="#") показать еще
+						+e.btn(href="#").d-none.d-lg-block показать еще
 				+tab()(class="active")
 				+tab()
 				+tab()

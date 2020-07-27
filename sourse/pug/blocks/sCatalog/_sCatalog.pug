@@ -1,4 +1,4 @@
-mixin itemProd(i, t,  sl)
+mixin itemProd(i, t,  sl, hideMore)
 	+b.prodItem(href="#")
 		picture
 			if sl
@@ -15,7 +15,8 @@ mixin itemProd(i, t,  sl)
 				br
 				| Клееный брус, 3 слоя 76 мм
 		+e.DIV.price от 11 150 ₽
-		+e.btn Подробнее
+		if !hideMore
+			+e.btn Подробнее
 		
 mixin sCatalog()
 	// start sCatalog
@@ -29,13 +30,13 @@ mixin sCatalog()
 					
 				.row
 					+e.col.col-lg-3.col-sm-6
-						+itemProd('1','Одностворчатое окно')
+						+itemProd('1','Одностворчатое окно','','hidebtn')
 					+e.col.col-lg-3.col-sm-6
-						+itemProd('2','Двустворчатое  окно')
+						+itemProd('2','Двустворчатое  окно','','hidebtn')
 					+e.col.col-lg-3.col-sm-6
-						+itemProd('3','Трехстворчатое окно')
+						+itemProd('3','Трехстворчатое окно','','hidebtn')
 					+e.col.col-lg-3.col-sm-6
-						+itemProd('4','Балконный блок ')
+						+itemProd('4','Балконный блок ','','hidebtn')
 					//- +e.col.col-3
 					//- 	+itemProd('4','Балконный блок ')
 	// end sCatalog

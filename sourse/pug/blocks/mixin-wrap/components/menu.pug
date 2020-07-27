@@ -11,7 +11,8 @@ mixin mnu()
 			
  
 	+e.UL.nav(itemscope itemtype="http://schema.org/SiteNavigationElement")
-		+e.LI.item( itemprop="item" ): +e.A.link.active(href="#"  itemprop="url") Каталог
+		+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url") Каталог
+		// на вешать .active
 		each linkPatch, linkName in nav
 			+e.LI.item( itemprop="item" ): +e.A.link(href= linkPatch  itemprop="url")= linkName
 //- /menu

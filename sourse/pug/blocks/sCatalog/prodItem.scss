@@ -64,10 +64,11 @@
 			 @extend .h6;
 			 font-weight: 700;
 			//  margin-bottom: rem(40);
-			padding-bottom: rem(28);
+			// padding-bottom: rem(28);
 			margin-top: auto;
 		 }
 		 &__btn{
+			 margin-top: rem(28);
 			 @extend .btn;
 			 @extend .btn-outline-primary;
 			 margin-left: auto;

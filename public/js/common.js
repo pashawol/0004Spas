@@ -187,6 +187,9 @@ function eventHandler() {
 		watchOverflow: true,
 		slidesPerView: 1,
 		breakpoints: {
+			768: {
+				slidesPerView: 2
+			},
 			992: {
 				slidesPerView: 6
 			}
@@ -246,6 +249,9 @@ function eventHandler() {
 			watchOverflow: true,
 			slidesPerView: 1,
 			breakpoints: {
+				768: {
+					slidesPerView: 2
+				},
 				992: {
 					slidesPerView: 6
 				}

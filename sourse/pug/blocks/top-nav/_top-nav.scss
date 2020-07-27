@@ -1,6 +1,6 @@
 .top-nav {
 	border-top: rem(8) solid $primary3;
-		@include media-breakpoint-up(xxl) {
+		@include media-breakpoint-up(xl) {
 			
 			position: fixed;
 			left: 0;
@@ -136,7 +136,7 @@
 	@include media-breakpoint-up(xs) {}
 
 	// 
-	@include media-breakpoint-between(lg, xxl) {
+	@include media-breakpoint-between(lg, xl) {
 		&__inner{
 			margin-left: auto;
 			margin-right: auto;
@@ -193,6 +193,14 @@
 		}
 	}
 
+	.contactBlock__item{
+
+		@include media-breakpoint-down(lg) {
+			margin-left: auto;
+			margin-right: auto;
+			max-width: rem(160);
+		}
+	}
 	// 
 	@include media-breakpoint-only(xs) {}
 

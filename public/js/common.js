@@ -280,7 +280,16 @@ function eventHandler() {
 		// mySwiper.init();
 	}
 
-	tabscostume('tabs');
+	tabscostume('tabs'); //footer year
+
+	function setFooterYear() {
+		var allRights = document.querySelector('.footer__all-rights-txt');
+		if (!allRights) return;
+		var currYear = new Date().getFullYear();
+		allRights.innerHTML = allRights.innerHTML + currYear + 'г.';
+	}
+
+	setFooterYear();
 	var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
 
 	if (isIE11) {

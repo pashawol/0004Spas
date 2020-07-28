@@ -324,6 +324,16 @@ function eventHandler() {
 
 	tabscostume('tabs');
 
+	//footer year
+	function setFooterYear() {
+		let allRights = document.querySelector('.footer__all-rights-txt');
+		if (!allRights) return
+
+		let currYear = new Date().getFullYear();
+		allRights.innerHTML = allRights.innerHTML + currYear +'г.';
+	}
+	setFooterYear();
+
 
 	var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
 	if (isIE11) {

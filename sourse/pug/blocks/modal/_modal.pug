@@ -13,15 +13,15 @@ mixin modal()
 		// #modal-call
 	// modal
 
-mixin modal()
+mixin modal2()
 	.d-none
 		+form-wrap()(id="modal-call2" class="modal-win modal-form")
 			+b.section-title
-				h2 Заказать звонок
+				h2 Оставить заявку
 			+inputReq("ФИО", 'text', undefined, 'name')(required)
 			+inputReq("Ваш телефон","tel", undefined, 'tel')(required)
 			+inputReq("Email","email", undefined, 'email')(required)
-			+e.LABEL.ta-label.req
+			+e.LABEL.ta-label
 				textarea.form-wrap__input.form-control.ta(placeholder="Cообщение")
 			+e.policy
 				| Нажимая кнопку «Отправить» вы соглашаетесь с

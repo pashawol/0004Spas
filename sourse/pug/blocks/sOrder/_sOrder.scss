@@ -31,6 +31,10 @@
 		 .form-wrap{
 				background-color: $success;
 				padding: rem(63) rem(30) rem(75);
+				@include media-breakpoint-up(lg) {
+				max-width: rem(590);
+				margin-left: auto;
+				}
 					@include media-breakpoint-down(sm) {
 						margin-left: -15px;
 						margin-right: -15px;

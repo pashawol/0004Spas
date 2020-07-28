@@ -97,6 +97,7 @@
 	}
 	--thumbHPb: calc(#{rem(250)} * 3);
 	&__slide{
+		height: initial;
 		@include media-breakpoint-up(lg) {
 
 			padding-top: rem(20);

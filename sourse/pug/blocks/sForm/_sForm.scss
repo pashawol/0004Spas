@@ -47,10 +47,7 @@
 		@extend .btn;
 		@extend .btn-outline-primary;
 
-		width: 100%;
-		@include media-breakpoint-up(sm){
-			width: 140px;
-		}
+		width: rem(140px);
 	}
 	//
 

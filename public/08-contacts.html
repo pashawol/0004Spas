@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>08</title>
+		<title>Контакты</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, shrink-to-fit=no">
@@ -100,25 +100,26 @@
 				<!-- end top-nav-->
 			</aside>
 			<main>
+				<div class="pageHead bg-wrap">
+					<!-- picture-->
+					<picture class="picture-bg"> 
+						<source srcset="img/@2x/webp/head-bg-catalog.webp" type="image/webp"/><img class="object-fit-js" src="img/@2x/head-bg-catalog.jpg" alt=""/>
+					</picture>
+					<!-- /picture-->
+					<div class="container">
+						<h1>Контакты</h1>
+						<nav aria-label="breadcrumb">
+							<ol class="breadcrumb" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+								<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
+										<meta itemprop="position" content="1"/></a></li>
+								<li class="breadcrumb-item active" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Контакты</span>
+										<meta itemprop="position" content="2"/></a></li>
+							</ol>
+						</nav>
+					</div>
+				</div>
 				<!-- start sContacts-->
 				<section class="sContacts section" id="sContacts">
-					<div class="sContacts__header">
-						<div class="sContacts__header-bg"><img class="lazy" src="#" data-src="img/@2x/head-bg-catalog.jpg" alt=""/>
-						</div>
-						<div class="container">
-							<div class="section-title">
-								<h2>Контакты</h2>
-							</div>
-							<nav aria-label="breadcrumb">
-								<ol class="breadcrumb" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
-									<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
-											<meta itemprop="position" content="1"/></a></li>
-									<li class="breadcrumb-item active" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Контакты</span>
-											<meta itemprop="position" content="2"/></a></li>
-								</ol>
-							</nav>
-						</div>
-					</div>
 					<div class="sContacts__container container">
 						<div class="sContacts__row row">
 							<div class="sContacts__contact-col col-sm-6 col-xl-3">
@@ -267,12 +268,14 @@
 				<footer class="footer block-with-lazy">
 					<div class="container"><a class="footer__mob-logo d-lg-none" href="/"><img class="lazy" src="#" data-src="img/@2x/logo.jpg" alt=""/></a>
 						<div class="footer__main-row row">
-							<div class="col-lg-4"><a class="footer__logo d-none d-lg-flex" href="#"><img class="lazy" src="#" data-src="img/@2x/logo.jpg" alt=""/></a>
+							<div class="footer__main-row-col col-lg-4"><a class="footer__logo d-none d-lg-flex" href="#"><img class="lazy" src="#" data-src="img/@2x/logo.jpg" alt=""/></a>
 								<div class="footer__all-rights-txt">
 									Компания СПАС&nbsp;&mdash; деревянные евроокна премиум класса
-									<br/>Все права защищены &copy;&nbsp;2020г.
+									<br/>Все права защищены &copy;&nbsp;
 								</div>
-								<div class="footer__company-creator"><span>Создание сайта компания "Алроникс"</span><img class="lazy" src="#" data-src="img/@2x/creator-logo.png" alt=""/>
+								<div class="footer__company-creator"><span>
+										Создание сайта компания
+										<a href="https://alronix.com/" target="blank">"Алроникс"</a></span><img class="lazy" src="#" data-src="img/@2x/creator-logo.png" alt=""/>
 								</div>
 							</div>
 							<div class="col-lg-8">
@@ -385,12 +388,41 @@
 					<!-- +e.input-wrap-->
 					<div class="form-wrap__input-wrap form-group req"><input class="form-wrap__input form-control" type="tel" placeholder="Ваш телефон" name="tel" required="required"/>
 					</div>
-					<!-- +e.input-wrap--><input class="form-wrap__btn" type="submit" value="отправить"/>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__policy">
+						Нажимая кнопку «Отправить» вы соглашаетесь с
+						<a href="#">Политикой конфиденциальности</a>
+					</div><input class="form-wrap__btn" type="submit" value="отправить"/>
 				</form>
 			</div>
 			<!-- #modal-call-->
 		</div>
 		<!-- modal-->
+		<div class="d-none">
+			<div class="form-wrap modal-win modal-form" id="modal-call2">
+				<form>
+					<div class="section-title">
+						<h2>Оставить заявку</h2>
+					</div>
+					<div class="form-wrap__input-wrap form-group req"><input class="form-wrap__input form-control" type="text" placeholder="ФИО" name="name" required="required"/>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group req"><input class="form-wrap__input form-control" type="tel" placeholder="Ваш телефон" name="tel" required="required"/>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group req"><input class="form-wrap__input form-control" type="email" placeholder="Email" name="email" required="required"/>
+					</div>
+					<!-- +e.input-wrap-->
+					<label class="form-wrap__ta-label">
+						<textarea class="form-wrap__input form-control ta" placeholder="Cообщение"></textarea>
+					</label>
+					<div class="form-wrap__policy">
+						Нажимая кнопку «Отправить» вы соглашаетесь с
+						<a href="#">Политикой конфиденциальности</a>
+					</div><input class="form-wrap__btn" type="submit" value="отправить"/>
+				</form>
+			</div>
+		</div>
 		<script src="js/lazy.js"></script>
 		<script src="libs/jquery/jquery.min.js"></script>
 		<!-- modal libs-->

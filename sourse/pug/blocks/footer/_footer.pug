@@ -4,16 +4,19 @@ mixin footer()
 			+e.A.mob-logo.d-lg-none(href='/')
 				img.lazy(src="#" data-src="img/@2x/logo.jpg" alt="")
 			+e.main-row.row
-				.col-lg-4
+				+e.main-row-col.col-lg-4
 					+e.A.logo.d-none.d-lg-flex(href="#")
 						img.lazy(src='#' data-src="img/@2x/logo.jpg" alt="")
 					+e.all-rights-txt
 						| Компания СПАС&nbsp;&mdash; деревянные евроокна премиум класса
 						|
 						br
-						| Все права защищены &copy;&nbsp;2020г.
+						| Все права защищены &copy;&nbsp;
 					+e.company-creator
-						span Создание сайта компания "Алроникс"
+						span
+							| Создание сайта компания
+							|
+							a(href='https://alronix.com/' target="blank") "Алроникс"
 						img.lazy(src="#" data-src="img/@2x/creator-logo.png" alt="")
 				.col-lg-8
 					+e.big-col-content

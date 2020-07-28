@@ -16,15 +16,15 @@ include ../blocks/sDealers/_sDealers.pug
 block variables
 	- let  mainPage= null
 block title
-	- let  title= '07'
+	- let  title= 'Статьи'
 	title= title
 block pagecontent 
 	aside
 		+mob-mnu()
 		+top-nav()
 	main
+		+pageHead('head-bg-catalog',title)
 		+sArticalsPage()
-			+breadcrumb('Главная', 'Статьи')
 		+sForm()
 		+footer()
 	

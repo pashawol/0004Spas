@@ -1,5 +1,5 @@
-mixin itemProd(i, t,  sl, hideMore)
-	+b.prodItem(href="#")
+mixin itemProd(i, t,  sl, hideMore, btnTxt='Подробнее', itemHref="#", linkClasses='')
+	+b.prodItem(href=itemHref class=linkClasses)
 		picture
 			if sl
 				source.swiper-lazy(srcset="#" data-srcset=`img/@2x/webp/prod-${i}.webp` type="image/webp")
@@ -16,7 +16,7 @@ mixin itemProd(i, t,  sl, hideMore)
 				| Клееный брус, 3 слоя 76 мм
 		+e.DIV.price от 11 150 ₽
 		if !hideMore
-			+e.btn Подробнее
+			+e.btn=btnTxt
 		
 mixin sCatalog()
 	// start sCatalog

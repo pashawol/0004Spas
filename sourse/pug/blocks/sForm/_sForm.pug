@@ -12,9 +12,9 @@ mixin sForm()
 				+e.inputs-col.col-lg-8
 					+form-wrap()
 						+e.top-inps-cont
-							+input('', 'text', 'Имя', 'name')
-							+input('', 'tel', 'телефон')
-							+input('', 'email', 'e-mail')
+							+inputReq('', 'text', 'Имя', 'name')(required)
+							+inputReq('', 'tel', 'телефон')(required)
+							+inputReq('', 'email', 'e-mail')(required)
 						//+input('', 'textarea', 'сообщение', 'message')
 						+e.LABEL.ta-label
 							+e.title сообщение
@@ -47,12 +47,12 @@ mixin sFormDealers()
 							+e.title ФИО/Организация
 							input.form-wrap__input.form-control(required)
 						+e.top-inps-cont
-							+inputReq('', 'text', 'Имя', 'name')(required)
+							+inputReq('', 'text', 'Город', 'city')(required)
 							+inputReq('', 'tel', 'телефон')(required)
 							+inputReq('', 'email', 'e-mail')(required)
-						+e.LABEL.ta-label.req
+						+e.LABEL.ta-label
 							+e.title сообщение
-							textarea.form-wrap__input.form-control.ta(required)
+							textarea.form-wrap__input.form-control.ta
 						+e.policy-cont
 							+e.policy
 								| Нажимая кнопку «Отправить» вы соглашаетесь с

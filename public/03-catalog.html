@@ -229,18 +229,21 @@
 								<div class="form-wrap">
 									<form>
 										<div class="form-wrap__top-inps-cont">
-											<div class="form-wrap__input-wrap form-group">
-												<label><span class="form-wrap__title">Имя</span><input class="form-wrap__input form-control" type="text" placeholder="" name="name"/>
+											<div class="form-wrap__input-wrap form-group req">
+												<label><span class="form-wrap__title">Имя</span><input class="form-wrap__input form-control" type="text" placeholder="" name="name" required="required"/>
 												</label>
 											</div>
-											<div class="form-wrap__input-wrap form-group">
-												<label><span class="form-wrap__title">телефон</span><input class="form-wrap__input form-control" type="tel" placeholder="" name="tel"/>
+											<!-- +e.input-wrap-->
+											<div class="form-wrap__input-wrap form-group req">
+												<label><span class="form-wrap__title">телефон</span><input class="form-wrap__input form-control" type="tel" placeholder="" name="tel" required="required"/>
 												</label>
 											</div>
-											<div class="form-wrap__input-wrap form-group">
-												<label><span class="form-wrap__title">e-mail</span><input class="form-wrap__input form-control" type="email" placeholder="" name="email"/>
+											<!-- +e.input-wrap-->
+											<div class="form-wrap__input-wrap form-group req">
+												<label><span class="form-wrap__title">e-mail</span><input class="form-wrap__input form-control" type="email" placeholder="" name="email" required="required"/>
 												</label>
 											</div>
+											<!-- +e.input-wrap-->
 										</div>
 										<!--+input('', 'textarea', 'сообщение', 'message')-->
 										<label class="form-wrap__ta-label"><span class="form-wrap__title">сообщение</span>
@@ -264,12 +267,14 @@
 				<footer class="footer block-with-lazy">
 					<div class="container"><a class="footer__mob-logo d-lg-none" href="/"><img class="lazy" src="#" data-src="img/@2x/logo.jpg" alt=""/></a>
 						<div class="footer__main-row row">
-							<div class="col-lg-4"><a class="footer__logo d-none d-lg-flex" href="#"><img class="lazy" src="#" data-src="img/@2x/logo.jpg" alt=""/></a>
+							<div class="footer__main-row-col col-lg-4"><a class="footer__logo d-none d-lg-flex" href="#"><img class="lazy" src="#" data-src="img/@2x/logo.jpg" alt=""/></a>
 								<div class="footer__all-rights-txt">
 									Компания СПАС&nbsp;&mdash; деревянные евроокна премиум класса
-									<br/>Все права защищены &copy;&nbsp;2020г.
+									<br/>Все права защищены &copy;&nbsp;
 								</div>
-								<div class="footer__company-creator"><span>Создание сайта компания "Алроникс"</span><img class="lazy" src="#" data-src="img/@2x/creator-logo.png" alt=""/>
+								<div class="footer__company-creator"><span>
+										Создание сайта компания
+										<a href="https://alronix.com/" target="blank">"Алроникс"</a></span><img class="lazy" src="#" data-src="img/@2x/creator-logo.png" alt=""/>
 								</div>
 							</div>
 							<div class="col-lg-8">
@@ -382,12 +387,41 @@
 					<!-- +e.input-wrap-->
 					<div class="form-wrap__input-wrap form-group req"><input class="form-wrap__input form-control" type="tel" placeholder="Ваш телефон" name="tel" required="required"/>
 					</div>
-					<!-- +e.input-wrap--><input class="form-wrap__btn" type="submit" value="отправить"/>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__policy">
+						Нажимая кнопку «Отправить» вы соглашаетесь с
+						<a href="#">Политикой конфиденциальности</a>
+					</div><input class="form-wrap__btn" type="submit" value="отправить"/>
 				</form>
 			</div>
 			<!-- #modal-call-->
 		</div>
 		<!-- modal-->
+		<div class="d-none">
+			<div class="form-wrap modal-win modal-form" id="modal-call2">
+				<form>
+					<div class="section-title">
+						<h2>Оставить заявку</h2>
+					</div>
+					<div class="form-wrap__input-wrap form-group req"><input class="form-wrap__input form-control" type="text" placeholder="ФИО" name="name" required="required"/>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group req"><input class="form-wrap__input form-control" type="tel" placeholder="Ваш телефон" name="tel" required="required"/>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group req"><input class="form-wrap__input form-control" type="email" placeholder="Email" name="email" required="required"/>
+					</div>
+					<!-- +e.input-wrap-->
+					<label class="form-wrap__ta-label">
+						<textarea class="form-wrap__input form-control ta" placeholder="Cообщение"></textarea>
+					</label>
+					<div class="form-wrap__policy">
+						Нажимая кнопку «Отправить» вы соглашаетесь с
+						<a href="#">Политикой конфиденциальности</a>
+					</div><input class="form-wrap__btn" type="submit" value="отправить"/>
+				</form>
+			</div>
+		</div>
 		<script src="js/lazy.js"></script>
 		<script src="libs/jquery/jquery.min.js"></script>
 		<!-- modal libs-->

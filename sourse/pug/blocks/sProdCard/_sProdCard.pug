@@ -1,13 +1,6 @@
 mixin sProdCard()
 	// start sProdCard
 	+b.SECTION.sProdCard.section#sProdCard&attributes(attributes)
-		+e.header
-			+e.header-bg
-				img.lazy(src='#' data-src="img/@2x/head-bg-catalog.jpg" alt="")
-			.container
-				+b.section-title
-					h2 деревянные окна
-				block
 		+e.white-strip
 			+e.top-bg.d-none.d-xl-block
 				img.lazy(src="#" data-src="img/@2x/prod-card-top.png" alt="")
@@ -24,7 +17,7 @@ mixin sProdCard()
 						+componentItem('уплотнитель', 3, 'alt-3')
 						+componentItem('замок', 4, 'alt-4')
 						+componentItem('краски', 5, 'alt-5')
-					+e.center-col.col-xl-4.col-xxl-6.d-none.d-xl-block
+					+e.center-col.col-xl-4.col-xxl-6
 						+e.big-wind-img
 							img.lazy(src='#' data-src='img/@2x/04-window-piece.png' alt='')
 					+e.right-col.col-sm-6.col-xl-4.col-xxl-3

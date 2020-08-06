@@ -96,7 +96,7 @@
 				justify-content: flex-start;
 			}
 			.sProdCard__brand-img-cont{
-				height: 80px;
+				// height: 80px;
 			}
 			.sProdCard__comp-img{
 				margin-right: 10px;
@@ -111,7 +111,7 @@
 				justify-content: flex-start;
 			}
 			.sProdCard__brand-img-cont{
-				height: 80px;
+				// height: 80px;
 			}
 			.sProdCard__comp-img{
 				margin-right: 10px;
@@ -125,16 +125,17 @@
 
 		display: flex;
 		align-items: center;
-		justify-content: flex-end;
+		// justify-content: flex-end;
 	}
 
 	&__brand-img-cont{
 		position: relative;
 		width: 164px;
-		height: 71px;
+		min-height: 20px;
+		// height: 71px;
 
-		display: flex;
-		align-items: flex-end;
+		// display: flex;
+		// align-items: flex-end;
 
 		img{
 			max-width: 100%;
@@ -146,7 +147,8 @@
 
 	&__brand-headline{
 		background-color: rgba($white, .5);
-		position: absolute;
+		// position: absolute;
+		width: 100%;
 		white-space: nowrap;
 		top: 0;
 		left: 0;

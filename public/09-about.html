@@ -102,26 +102,24 @@
 				<!-- end top-nav-->
 			</aside>
 			<main>
-				<!-- start sArticalsPage-->
-				<section class="sArticalsPage section" id="sArticalsPage">
-					<div class="sArticalsPage__header">
-						<div class="sArticalsPage__header-bg"><img src="img/@2x/head-bg-catalog.jpg" alt=""/>
-						</div>
-						<div class="container">
-							<div class="section-title">
-								<h2>О компании</h2>
-							</div>
-							<nav aria-label="breadcrumb">
-								<ol class="breadcrumb" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
-									<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
-											<meta itemprop="position" content="1"/></a></li>
-									<li class="breadcrumb-item active" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">О компании</span>
-											<meta itemprop="position" content="2"/></a></li>
-								</ol>
-							</nav>
-						</div>
+				<div class="pageHead bg-wrap">
+					<!-- picture-->
+					<picture class="picture-bg"> 
+						<source srcset="img/@2x/webp/head-bg-catalog.webp" type="image/webp"/><img class="object-fit-js" src="img/@2x/head-bg-catalog.jpg" alt=""/>
+					</picture>
+					<!-- /picture-->
+					<div class="container">
+						<h1>О компании</h1>
+						<nav aria-label="breadcrumb">
+							<ol class="breadcrumb" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+								<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
+										<meta itemprop="position" content="1"/></a></li>
+								<li class="breadcrumb-item active" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">О компании</span>
+										<meta itemprop="position" content="2"/></a></li>
+							</ol>
+						</nav>
 					</div>
-				</section>
+				</div>
 				<!-- start sAbout-->
 				<section class="sAbout sAbout--inner section" id="sAbout">
 					<div class="container">
@@ -464,6 +462,11 @@
 						</div>
 					</div>
 				</footer>
+				<div class="btn-top btn-top--js btn btn-primary d-md-none">
+					<svg class="icon icon-chevron-left ">
+						<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+					</svg>
+				</div>
 			</main>
 		</div>
 		<div class="d-none">

@@ -472,3 +472,17 @@ iframe {
 .btn-outline-primary{ 
 	color: $body-color;
 }
+
+
+.btn-top{
+	// position: absolute;
+	position: fixed;
+	bottom: 5px;
+	transform: rotate(90deg);
+	right: -100px;
+	@include mt;
+	&.active{
+		right: 5px;
+
+	}
+}

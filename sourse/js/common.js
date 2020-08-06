@@ -122,22 +122,24 @@ function eventHandler() {
 
 
 	// /закрыть/открыть мобильное меню
+	let stickyElement = document.querySelector('.btn-top--js')
+
+	stickyElement.addEventListener('click', () => {
+	 
+		document.documentElement.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+		 
+	})
 
 	function heightses() {
  
 		// скрывает моб меню
 
 		//select element after
-		// const topH = document.querySelector('header').scrollHeight;
-		// let stickyElement = document.querySelector('.top-nav')
-		// window.onscroll = () => {
-		// 	if ($(window).scrollTop() > topH) {
-
-		// 		stickyElement.classList.add('fixed');
-		// 	} else {
-		// 		stickyElement.classList.remove('fixed'); 
-		// 	}
-		// };
+		const topH = document.documentElement.clientHeight / 2;
+		window.onscroll = () => { $(window).scrollTop() > topH  
+				? stickyElement.classList.add('active')
+				: stickyElement.classList.remove('active');
+		};
 		// конец добавил
 		if (window.matchMedia("(min-width: 992px)").matches) {
 			JSCCommon.closeMenu();

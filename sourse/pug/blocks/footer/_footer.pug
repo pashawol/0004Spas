@@ -46,6 +46,8 @@ mixin footer()
 								+footerContItem('mail', 'e-mail')
 									+e.A.mail-link(href="mailto:info@gmail.com") info@gmail.com
 
+	+b.btn-top--js.btn.btn-primary.d-md-none
+		+icon('chevron-left')
 mixin footerContItem(iconName, itemName)
 	+e.cont-item
 		+e.item-header

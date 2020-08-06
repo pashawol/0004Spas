@@ -155,12 +155,13 @@
 			padding-right: 0;
 		}
 		&__menu-wrap{
-			grid-column: 4/10;
+			grid-column: 4/13;
 			order: -1;
 			width: 100%;
 		}
 		.searchBlock{
-			grid-column: 11/13;
+			grid-column: 12/13;
+			grid-row: 2/3;
 			padding-left: rem(5);
 			margin-bottom: 3rem;
 			input{
@@ -169,7 +170,7 @@
 			
 		}
 		.contactBlock{
-			grid-column: 4/13;
+			grid-column: 4/12;
 			padding-left: 0;
 			padding-right: 0;
 			display: flex;

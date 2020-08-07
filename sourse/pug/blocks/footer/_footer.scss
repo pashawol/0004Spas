@@ -142,7 +142,7 @@
         justify-content: space-between;
         flex-direction: row;
       }
-      @include media-breakpoint-up(lg){
+      @include media-breakpoint-up(xxl){
         justify-content: flex-start;
       }
 
@@ -155,7 +155,7 @@
           margin-right: 15px;
         }
         @include media-breakpoint-up(xl){
-          margin-right: rem(35px);
+          margin-right: rem(25px);
         }
         @include media-breakpoint-up(xxl){
           margin-right: 45px;

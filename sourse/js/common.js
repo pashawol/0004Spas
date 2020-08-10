@@ -228,8 +228,8 @@ function eventHandler() {
 	const swiperssLogos = new Swiper('.sLogos__slider--js', {
 		// slidesPerView: 5,
 		...defaultSl,
+		// loop: true,
 		watchOverflow: true,
-		slidesPerView: 2,
 		breakpoints: { 
 			576: {
 				slidesPerView: 3
@@ -243,13 +243,12 @@ function eventHandler() {
 				slidesPerView: 6
 			},
 		},
-		loop: true,
 		navigation: {
 			nextEl: '.sLogos .swiper-button-next',
 			prevEl: '.sLogos .swiper-button-prev',
 		},
 	});
- 
+	swiperssLogos.lazy.load();
 
 	const swiperCertificates = new Swiper('.slider-certificates', {
 		// slidesPerView: 5,

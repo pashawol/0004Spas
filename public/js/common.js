@@ -207,8 +207,8 @@ function eventHandler() {
 		}
 	}));
 	var swiperssLogos = new Swiper('.sLogos__slider--js', _objectSpread(_objectSpread({}, defaultSl), {}, {
+		// loop: true,
 		watchOverflow: true,
-		slidesPerView: 2,
 		breakpoints: {
 			576: {
 				slidesPerView: 3
@@ -220,12 +220,12 @@ function eventHandler() {
 				slidesPerView: 6
 			}
 		},
-		loop: true,
 		navigation: {
 			nextEl: '.sLogos .swiper-button-next',
 			prevEl: '.sLogos .swiper-button-prev'
 		}
 	}));
+	swiperssLogos.lazy.load();
 	var swiperCertificates = new Swiper('.slider-certificates', _objectSpread(_objectSpread({}, defaultSl), {}, {
 		watchOverflow: true,
 		slidesPerView: 2,

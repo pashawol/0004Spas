@@ -8,10 +8,10 @@ mixin sLogos()
 			+e.slider-wrapper
 				+e.slider--js.swiper-container
 					.swiper-wrapper
-						- for (var x = 1; x < 7; x++)
+						- for (var x = 1; x < 3; x++)
 							+e.slide.swiper-slide.bg-wrap( )
 								picture
-									source.swiper-lazy(srcset="#" data-srcset=`img/@2x/webp/logo-${x}.webp` type="image/webp")
+									//- source.swiper-lazy(srcset="#" data-srcset=`img/@2x/webp/logo-${x}.webp` type="image/webp")
 									img.swiper-lazy(src="#" data-src=`img/@2x/logo-${x}.png`, alt="") 
 				+arrow
 	// end sLogos
